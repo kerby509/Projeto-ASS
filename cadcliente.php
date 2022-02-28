@@ -50,6 +50,7 @@
      <div align="center">
      <input type="submit" name="cadastrar" value="Cadastrar cliente &gt;&gt;"></div></td>
     </tr>
-   </table>
+   </table> 
+   </form>
   
  
