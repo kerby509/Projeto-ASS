@@ -1,6 +1,4 @@
 <?php
-    //echo 'oi' ;
-    //exit();
     session_start();
     if (!isset($_SESSION['autenticados'])){
 
