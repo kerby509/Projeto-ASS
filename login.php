@@ -2,6 +2,14 @@
  
 include'css/styles.css';
 
+session_start();
+if(@$_POST['usuario']=='' &&
+    @$_POST['senha']==''){
+        $_SESSION['autenticados']=1;
+        header('Location: index.php');
+        exit();
+    }
+
 
 
 
@@ -25,7 +33,7 @@ include'css/styles.css';
         <form style=" background:red;
         width: 100%;
         max-width: 480px;
-         padding: 0.5rem;s
+         padding: 0.5rem;
          " action="login.php" method="post" >
             <h1 style= "text-align: center;
             ">Acessar ao Sistema</h1>
