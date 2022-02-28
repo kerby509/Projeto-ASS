@@ -1,6 +1,19 @@
 <?php
 
+session_start();
+if(@$_POST['nome']=='Daniel'&&
+  @$_POST['cpf']== '1'&&
+  @$_POST['telefone']== '2'&&
+  @$_POST['data de entrega']== '10/10/2022'&&
+  //@&_POST['modelo']== 'x'&&
+  @$_POST['serviços']== 'tele'){
+      $_SESSION['autenticados']=1;
+      header('Location: index.php');
+      exit();
 
+  }
+  //var_dump($_POST);
+  //exit();
 ?>
  <form className="form" action="cadcliente.php" method="post" >
 <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
