@@ -17,7 +17,7 @@
     <tr>
      <td height="25" width="24%"><font face="Arial" size="2">CPF:</font></td>
      <td height="25" width="76%"><font face="Arial" size="2">
-     <input type="text" name="end_user" size="30"></font></td>
+     <input type="text" name="cpf_user" size="30"></font></td>
     </tr>
 
 
@@ -30,19 +30,22 @@
     <tr>
      <td height="25" width="24%"><font face="Arial" size="2">Date de entrega:</font></td>
      <td height="25" width="76%"><font face="Arial" size="2">
-     <input type="text" name="bairro_user" size="30"></font></td>
+     <input type="date" name="begin" 
+        placeholder="dd-mm-yyyy" value=""
+        min="1997-01-01" max="2030-12-31">
+     
     </tr>
 
     <tr>
      <td height="25" width="24%"><font face="Arial" size="2">Modelo:</font></td>
      <td height="25" width="76%"><font face="Arial" size="2">
-     <input type="text" name="email_user" size="35"></font></td>
+     <input type="text" name="modelo_user" size="35"></font></td>
     </tr>
 
     <tr>
      <td height="25" width="24%"><font face="Arial" size="2">Serviços:</font></td>
      <td height="25" width="76%"><font face="Arial" size="2">
-     <input type="text" name="tel_user" size="35"></font></td>
+     <input type="text" name="ser_user" size="35"></font></td>
     </tr>
 
     <tr>
