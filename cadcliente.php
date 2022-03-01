@@ -5,6 +5,7 @@ if(@$_POST['nome']=='Daniel'&&
   @$_POST['cpf']== '1'&&
   @$_POST['telefone']== '2'&&
   @$_POST['data de entrega']== '10/10/2022'&&
+  //não sei pq não pegou
   //@&_POST['modelo']== 'x'&&
   @$_POST['serviços']== 'tele'){
       $_SESSION['autenticados']=1;
