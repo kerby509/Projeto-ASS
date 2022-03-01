@@ -36,7 +36,7 @@
                 <h1><img src="cream.jpeg"></h1>
                 <nav>
                     <ul>
-                        <li><a href="Index.html">Cadastrar Cliente</a></li>
+                        <li><a href="cadcliente.php">Cadastrar Cliente</a></li>
                         <li><a href="produtos.html">Cadastrar Funcionario</a></li>
                         <li><a href="contato.html">Registra entrega</a></li>
                     </ul>
