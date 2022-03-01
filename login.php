@@ -3,8 +3,8 @@
 include'css/styles.css';
 
 session_start();
-if(@$_POST['usuario']=='' &&
-    @$_POST['senha']==''){
+if(@$_POST['usuario']=='mega' &&
+    @$_POST['senha']=='1234'){
         $_SESSION['autenticados']=1;
         header('Location: index.php');
         exit();
@@ -22,13 +22,13 @@ if(@$_POST['usuario']=='' &&
 <html>
     
 
-    <div style= "  display:flex ;
+    <div style= "display:flex ;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     padding: 0 2rem;
-    background-image: url("assets/fundo.jpeg");">
+    background-image: url(assets/fundo.jpeg)">
 
         <form style=" background:red;
         width: 100%;
