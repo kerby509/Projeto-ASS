@@ -3,7 +3,7 @@
 include'css/styles.css';
 
 session_start();
-if(@$_POST['usuario']=='mega' &&
+if(@$_POST['usuario']=='megas' &&
     @$_POST['senha']=='1234'){
         $_SESSION['autenticados']=1;
         header('Location: index.php');
