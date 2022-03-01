@@ -11,12 +11,6 @@ if(@$_POST['usuario']=='mega' &&
     }
 
 
-
-
-
-
-
-
 ?>
 
 <html>
