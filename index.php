@@ -92,8 +92,12 @@
                     <li class="itens">Localizada no coração da cidade</li>
                     <li class="itens">Espaço diferenciado de Atendimento</li>
                     <li class="itens">Profissionais qualificados</li>
+                    <li class="itens">Três meses de garantia sobre conserto</li>
+                    <li class="itens">Serviços mais rapido</li>
+
+
                 </ul>
-                <img src="beneficios.jpeg" class="image-beneficios">
+                <img src="assets/beneficios.jpeg" class="image-beneficios">
            </div>
             <div class="video">
                 
