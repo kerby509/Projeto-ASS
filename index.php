@@ -9,16 +9,13 @@
         exit();
     }
 
-    echo' aqui nos vamos implementar a pagina principal';
+    echo"Estamos em teste por enquanto!!!!!";
 
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<link rel="stylesheet" href="style.css">
-
-
- 
+<link rel="stylesheet" href="styles.css">
     
 <head>
     <meta charset="UTF-8">
@@ -33,7 +30,7 @@
         <h1 class="titulopricinpal">Mega Assistencia Técnica</h1>
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
-            <div class="caixa">
+            <div class="opcao">
                 <h1><img src="assets/logo.jpeg"></h1>
                 <nav>
                     <ul>
@@ -57,7 +54,7 @@
             </div>
         </header>
 
-    <img class="banner" src="image.jpeg">
+    <img class="banner" src="assets/image1.jpeg">
     <main>
         <section class="principal">
             <h2 class="titulo-principal">Sobre Mega Assistencia Técnico</h2>
