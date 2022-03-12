@@ -27,14 +27,29 @@ header {
     padding: 20px 0;
 }
 
-.opcao {
+/*.opcao {
     position: relative;
     width: 940px;
     margin: 0 auto;
-}
+}*/
 .opcao h1{
     width: 50px;
+    
 }
+.log {
+    padding: 20px;
+    font-size: medium;
+    float: right;
+    font-weight: bold;
+    color: #000000;
+    text-decoration:none;
+    
+}
+.log :hover{
+    color:#C78C19;
+    text-decoration: underline; 
+}
+
 
 nav {
     position: absolute;
@@ -45,6 +60,9 @@ nav {
 nav li {
     display: inline;    /*colocar alinhado*/
     margin: 0 0 0 15px;   /* colocar espaco*/
+    padding: 7px;
+    float: right;
+
 }
 
 nav a  {
@@ -53,6 +71,11 @@ nav a  {
     font-weight: bold; /*colocar em negrito*/
     font-size: 22px;
     text-decoration: none;
+}
+
+nav a:hover{ /* dar color quando passa o maouse acima*/
+    color:#C78C19;
+    text-decoration: underline;
 }
 
 .banner {
