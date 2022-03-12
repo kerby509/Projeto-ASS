@@ -58,7 +58,7 @@
     <main>
         <section class="principal">
             <h2 class="titulo-principal">Sobre Mega Assistencia Técnico</h2>
-            <img class="utensilios" src="ice1.jpeg" alt="utensilios soverteria">
+            <img class="utensilios" src="assets/utensilos.jpeg" alt="utensilios soverteria">
 
             <p>Localizada no centro da cidade<strong> Mega Assistencia </strong> traz para o mercado
                 oa melhor solução para o seu celular. Fundada em 2021, a Mega Assistencia já é destaque na cidade
