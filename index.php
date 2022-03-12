@@ -24,9 +24,13 @@
 
     </head>
 
+
 <body>
     <header>
+    <h2><a class="log" href="logout.php">Logout</a></h2>
+
         <h1 class="titulopricinpal">Mega Assistencia Técnica</h1>
+
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
             <div class="opcao">
@@ -41,7 +45,7 @@
                         <li><a href="contato.html">Consulta Lista</a></li>
                         <li><a href="contato.html">Registra Pagamemto</a></li>
                         <li><a href="contato.html">Lista de Peças</a></li>
-                        <li><a href="contato.html">Logout</a></li>
+                        
 
 
 
