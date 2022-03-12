@@ -60,3 +60,33 @@
     float: left; /*colocar imagem ao lado de um texto*/
     margin: 0 20px 20px 0;
 }
+
+.beneficios {
+    padding: 3em 0;
+    background: #888888;
+    margin: 0 auto;
+}
+.itens {
+    line-height: 1.5;
+}
+.itens:before{
+    content: "✸";
+}
+
+.conteudo-beneficios{
+    width: 640px;
+    margin: 0 auto;
+
+}
+.lista-beneficios{
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    margin-right: 15%;
+
+}
+.mapa-conteudo{
+    width: 940px;
+    margin: 0 auto;
+
+}
