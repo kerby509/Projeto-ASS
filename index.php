@@ -9,7 +9,6 @@
         exit();
     }
 
-    echo"Estamos em teste por enquanto!!!!!";
 
 ?>
 <!DOCTYPE html>
@@ -57,7 +56,7 @@
     <img class="banner" src="assets/image1.jpeg">
     <main>
         <section class="principal">
-            <h2 class="titulo-principal">Sobre Mega Assistencia Técnico</h2>
+            <h2 class="titulo-principal">Sobre Mega Assistencia Técnica</h2>
             <img class="utensilios" src="assets/utensilos.jpeg" alt="utensilios soverteria">
 
             <p>Localizada no centro da cidade<strong> Mega Assistencia </strong> traz para o mercado
