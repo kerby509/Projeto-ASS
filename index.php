@@ -1,4 +1,7 @@
 <?php
+
+  include'css/styles.css';
+
     session_start();
     if (!isset($_SESSION['autenticados'])){
 
@@ -12,9 +15,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<link rel="stylesheet" href="">
-
-<link rel="stylesheet" href="">
+<link rel="stylesheet" href="style.css">
 
 
  
@@ -33,12 +34,24 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
             <div class="caixa">
-                <h1><img src="cream.jpeg"></h1>
+                <h1><img src="assets/logo.jpeg"></h1>
                 <nav>
                     <ul>
-                        <li><a href="cadcliente.php">Cadastrar Cliente</a></li>
+                        <li><a href="cadcliente.php">Registra Cliente</a></li>
                         <li><a href="produtos.html">Cadastrar Funcionario</a></li>
                         <li><a href="contato.html">Registra entrega</a></li>
+                        <li><a href="contato.html">Atualizar Lista</a></li>
+                        <li><a href="contato.html">excluir Serviços</a></li>
+                        <li><a href="contato.html">Consulta Lista</a></li>
+                        <li><a href="contato.html">Registra Pagamemto</a></li>
+                        <li><a href="contato.html">Lista de Peças</a></li>
+                        <li><a href="contato.html">Logout</a></li>
+
+
+
+
+
+
                     </ul>
                 </nav>
             </div>
