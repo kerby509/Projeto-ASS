@@ -10,6 +10,8 @@ if(@$_POST['usuario']=='megas' &&
         exit();
     }
 
+//include 'barra_de_navigação.php';
+
 
 ?>
 

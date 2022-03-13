@@ -8,6 +8,9 @@
         header('location: cadcliente.php');
         exit();
     }
+    //include 'barra_de_navigação.php';
+
+
 
 
 ?>

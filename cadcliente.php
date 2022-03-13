@@ -13,6 +13,8 @@ if(@$_POST['nome']=='Daniel'&&
       exit();
 
   }
+  include 'barra_de_navigação.php';
+
   //var_dump($_POST);
   //exit();
 ?>
