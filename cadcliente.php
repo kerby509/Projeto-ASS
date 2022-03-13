@@ -10,7 +10,7 @@ if(@$_POST['nome']==''&&
   @$_POST['modelo']== ''&&
   @$_POST['serviços']== ''&&
   @_POST['senha']){
-      $sql=$db->prepare("INSERT INTO usuarios(nome,cpf,telefone,datadeentrega,modelo,serviços) VALUES (ValorParaOAtributo1, ..)");
+      $sql=$db->prepare("INSERT INTO usuarios(nome,email,cpf,telefone,datadeentrega,modelo,serviços,senha) VALUES (S_POST['nome'],@POST['email],@_POST['cpf'],@_POST['telefone'],@_POST['data de entrega'],@_POST['modelo'],@_POST['serviços'],@_POST['senha'])");
     $_SESSION['autenticados']=1;
       header('Location: index.php');
       exit();
