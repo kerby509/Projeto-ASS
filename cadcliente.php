@@ -1,19 +1,22 @@
 <?php
-
+include 'db.php';
 session_start();
-if(@$_POST['nome']=='Daniel'&&
-  @$_POST['cpf']== '1'&&
-  @$_POST['telefone']== '2'&&
-  @$_POST['data de entrega']== '10/10/2022'&&
-  //não sei pq não pegou
-  @$_POST['modelo']== 'x'&&
-  @$_POST['serviços']== 'tele'){
-      $_SESSION['autenticados']=1;
+
+if(@$_POST['nome']==''&&
+  @_POST['email']== ''&&
+  @$_POST['cpf']== ''&&
+  @$_POST['telefone']== ''&&
+  @$_POST['data de entrega']== ''&&
+  @$_POST['modelo']== ''&&
+  @$_POST['serviços']== ''&&
+  @_POST['senha']){
+      $sql=$db->prepare("INSERT INTO usuarios(nome,cpf,telefone,datadeentrega,modelo,serviços) VALUES (ValorParaOAtributo1, ..)");
+    $_SESSION['autenticados']=1;
       header('Location: index.php');
       exit();
 
   }
-  include 'barra_de_navigação.php';
+  //include 'barra_de_navigação.php';
 
   //var_dump($_POST);
   //exit();
