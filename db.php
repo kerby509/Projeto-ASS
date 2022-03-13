@@ -13,6 +13,7 @@ $arquivo = 'database.sqlite';
 // para acessar o banco de dados depois de incluir `db.php`
 $db = null;
 
+
 try {
     // Se o arquivo com os dados do banco não existe, cria um e inicializa
     // as tabelas para uso.
