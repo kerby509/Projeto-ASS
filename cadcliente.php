@@ -2,20 +2,20 @@
 include 'db.php';
 session_start();
 
-if(@$_POST['nome']==''&&
-  @_POST['email']== ''&&
-  @$_POST['cpf']== ''&&
-  @$_POST['telefone']== ''&&
-  @$_POST['data de entrega']== ''&&
-  @$_POST['modelo']== ''&&
-  @$_POST['serviços']== ''&&
+if(@$_POST['nome']&&
+  @_POST['email']&&
+  @$_POST['cpf']&&
+  @$_POST['telefone']&&
+  @$_POST['data de entrega']&&
+  @$_POST['modelo']&&
+  @$_POST['serviços']&&
   @_POST['senha']){
     $sql=$db->prepare("INSERT INTO usuarios(nome,email,cpf,telefone,datadeentrega,modelo,serviços,senha) VALUES (:nome,:email,:cpf,:telefone,:data de entrega,:modelo,serviços,senha)");
     $sql->bindParam('nome', $_POST['nome'], PDO::PARAM_STR);
     $sql->bindParam('email', $_POST['email'], PDO::PARAM_STR);
     $sql->bindParam('cpf', $_POST['cpf'], PDO::PARAM_STR);
     $sql->bindParam('telefone', $_POST['telefone'], PDO::PARAM_STR);
-    $sql->bindParam('data de entrega', $_POST['data de entrega'], PDO::PARAM_STR);
+    $sql->bindParam('data de entrega', $_POST['data de entrega']);
     $sql->bindParam('modelo', $_POST['modelo'], PDO::PARAM_STR);
     $sql->bindParam('serviços', $_POST['serviços'], PDO::PARAM_STR);
     $sql->bindParam('senha', $_POST['senha'], PDO::PARAM_STR);
@@ -40,32 +40,32 @@ if(@$_POST['nome']==''&&
     <tr>
      <td width="24%" height="25"><font face="Arial" size="2">Nome:</font></td>
      <td height="25" width="76%"><font face="Arial" size="2">
-     <input type="text" name="nome_user" size="35"></font></td>
+     <input type="text" name="nome" size="35"></font></td>
     </tr>
 
     <tr>
      <td width="24%" height="25"><font face="Arial" size="2">Email:</font></td>
      <td height="25" width="76%"><font face="Arial" size="2">
-     <input type="text" name="email_user" size="35"></font></td>
+     <input type="text" name="email" size="35"></font></td>
     </tr>
 
     <tr>
      <td height="25" width="24%"><font face="Arial" size="2">CPF:</font></td>
      <td height="25" width="76%"><font face="Arial" size="2">
-     <input type="text" name="cpf_user" size="30"></font></td>
+     <input type="text" name="cpf" size="30"></font></td>
     </tr>
 
 
     <tr>
      <td height="25" width="24%"><font face="Arial" size="2">Telefone:</font></td>
      <td height="25" width="76%"><font face="Arial" size="2">
-     <input type="text" name="tel_user" size="20"></font></td>
+     <input type="text" name="telefone" size="20"></font></td>
     </tr>
 
     <tr>
      <td height="25" width="24%"><font face="Arial" size="2">Date de entrega:</font></td>
      <td height="25" width="76%"><font face="Arial" size="2">
-     <input type="date" name="begin" 
+     <input type="date" name="data de entrega" 
         placeholder="dd-mm-yyyy" value=""
         min="1997-01-01" max="2030-12-31">
      
@@ -74,19 +74,19 @@ if(@$_POST['nome']==''&&
     <tr>
      <td height="25" width="24%"><font face="Arial" size="2">Modelo:</font></td>
      <td height="25" width="76%"><font face="Arial" size="2">
-     <input type="text" name="modelo_user" size="35"></font></td>
+     <input type="text" name="modelo" size="35"></font></td>
     </tr>
 
     <tr>
      <td height="25" width="24%"><font face="Arial" size="2">Serviços:</font></td>
      <td height="25" width="76%"><font face="Arial" size="2">
-     <input type="text" name="ser_user" size="35"></font></td>
+     <input type="text" name="serviços" size="35"></font></td>
     </tr>
 
     <tr>
      <td width="24%" height="25"><font face="Arial" size="2">Cria a Senha:</font></td>
      <td height="25" width="76%"><font face="Arial" size="2">
-     <input type="text" name="senha_user" size="35"></font></td>
+     <input type="text" name="senha" size="35"></font></td>
     </tr>
 
     <tr>
