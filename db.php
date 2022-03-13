@@ -35,6 +35,7 @@ try {
             datedeentrega datetime,
             modelo TEXT,
             serviços TEXT,
+            senha TEXT,
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP
         )');  
     }

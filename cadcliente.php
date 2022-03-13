@@ -10,8 +10,10 @@ if(@$_POST['nome']==''&&
   @$_POST['modelo']== ''&&
   @$_POST['serviços']== ''&&
   @_POST['senha']){
-      $sql=$db->prepare("INSERT INTO usuarios(nome,email,cpf,telefone,datadeentrega,modelo,serviços,senha) VALUES (S_POST['nome'],@POST['email],@_POST['cpf'],@_POST['telefone'],@_POST['data de entrega'],@_POST['modelo'],@_POST['serviços'],@_POST['senha'])");
-    $_SESSION['autenticados']=1;
+    $sql=$db->prepare("INSERT INTO usuarios(nome,email,cpf,telefone,datadeentrega,modelo,serviços,senha) VALUES (S_POST['nome'],@POST['email],@_POST['cpf'],@_POST['telefone'],@_POST['data de entrega'],@_POST['modelo'],@_POST['serviços'],@_POST['senha'])");
+    $sql->execute();
+
+      $_SESSION['autenticados']=1;
       header('Location: index.php');
       exit();
 
@@ -31,6 +33,12 @@ if(@$_POST['nome']==''&&
      <td width="24%" height="25"><font face="Arial" size="2">Nome:</font></td>
      <td height="25" width="76%"><font face="Arial" size="2">
      <input type="text" name="nome_user" size="35"></font></td>
+    </tr>
+
+    <tr>
+     <td width="24%" height="25"><font face="Arial" size="2">Email:</font></td>
+     <td height="25" width="76%"><font face="Arial" size="2">
+     <input type="text" name="email_user" size="35"></font></td>
     </tr>
 
     <tr>
@@ -65,6 +73,12 @@ if(@$_POST['nome']==''&&
      <td height="25" width="24%"><font face="Arial" size="2">Serviços:</font></td>
      <td height="25" width="76%"><font face="Arial" size="2">
      <input type="text" name="ser_user" size="35"></font></td>
+    </tr>
+
+    <tr>
+     <td width="24%" height="25"><font face="Arial" size="2">Cria a Senha:</font></td>
+     <td height="25" width="76%"><font face="Arial" size="2">
+     <input type="text" name="senha_user" size="35"></font></td>
     </tr>
 
     <tr>

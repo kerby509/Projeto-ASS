@@ -1,14 +1,21 @@
 <?php
  
 include'css/styles.css';
+include'db.php';
+
+
+$sql=$db->prepare("SELECT * FROM usuarios WHERE email=:email and senha=:senha");
+$sql->bindParam('email', $_POST['email'], PDO::PARAM_STR);
+$sql->execute();
 
 session_start();
-if(@$_POST['usuario']=='megas' &&
-    @$_POST['senha']=='1234'){
+if(@$_POST['usuario']=='' &&
+    @$_POST['senha']==''){
         $_SESSION['autenticados']=1;
         header('Location: index.php');
         exit();
     }
+
 
 //include 'barra_de_navigação.php';
 
