@@ -3,14 +3,15 @@
 include'css/styles.css';
 include'db.php';
 
-
+// sa c pou lew fin fe cadastra a pou cliente resgistre nan sistem nan
 $sql=$db->prepare("SELECT * FROM usuarios WHERE email=:email and senha=:senha");
 $sql->bindParam('email', $_POST['email'], PDO::PARAM_STR);
+$sql->bindParam('senha', $_POST['senha'], PDO::PARAM_STR);
 $sql->execute();
+$data = $sql->fetch();
 
 session_start();
-if(@$_POST['usuario']=='' &&
-    @$_POST['senha']==''){
+if($data){
         $_SESSION['autenticados']=1;
         header('Location: index.php');
         exit();

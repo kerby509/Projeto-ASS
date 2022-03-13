@@ -10,7 +10,15 @@ if(@$_POST['nome']==''&&
   @$_POST['modelo']== ''&&
   @$_POST['serviços']== ''&&
   @_POST['senha']){
-    $sql=$db->prepare("INSERT INTO usuarios(nome,email,cpf,telefone,datadeentrega,modelo,serviços,senha) VALUES (S_POST['nome'],@POST['email],@_POST['cpf'],@_POST['telefone'],@_POST['data de entrega'],@_POST['modelo'],@_POST['serviços'],@_POST['senha'])");
+    $sql=$db->prepare("INSERT INTO usuarios(nome,email,cpf,telefone,datadeentrega,modelo,serviços,senha) VALUES (:nome,:email,:cpf,:telefone,:data de entrega,:modelo,serviços,senha)");
+    $sql->bindParam('nome', $_POST['nome'], PDO::PARAM_STR);
+    $sql->bindParam('email', $_POST['email'], PDO::PARAM_STR);
+    $sql->bindParam('cpf', $_POST['cpf'], PDO::PARAM_STR);
+    $sql->bindParam('telefone', $_POST['telefone'], PDO::PARAM_STR);
+    $sql->bindParam('data de entrega', $_POST['data de entrega'], PDO::PARAM_STR);
+    $sql->bindParam('modelo', $_POST['modelo'], PDO::PARAM_STR);
+    $sql->bindParam('serviços', $_POST['serviços'], PDO::PARAM_STR);
+    $sql->bindParam('senha', $_POST['senha'], PDO::PARAM_STR);
     $sql->execute();
 
       $_SESSION['autenticados']=1;
