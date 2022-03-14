@@ -11,6 +11,8 @@
     //include 'barra_de_navigação.php';
 
 ?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
