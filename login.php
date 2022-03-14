@@ -4,7 +4,7 @@ include'css/styles.css';
 include'db.php';
 
 // sa c pou lew fin fe cadastra a pou cliente resgistre nan sistem nan
-//pukisa c nn login nn ou fè saaa
+//pukisa c nn login nn ou fè saaa.
 $sql=$db->prepare("SELECT * FROM usuarios WHERE email=:email and senha=:senha");
 $sql->bindParam('email', $_POST['email'], PDO::PARAM_STR);
 $sql->bindParam('senha', $_POST['senha'], PDO::PARAM_STR);
