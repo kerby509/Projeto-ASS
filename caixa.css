@@ -42,3 +42,7 @@ input[type=text], select, textarea {
         top: 500px;
         left: 280px;
     }
+
+    input[type=submit]:hover {
+        background-color: #141414;
+        }
