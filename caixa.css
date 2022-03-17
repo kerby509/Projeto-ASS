@@ -80,4 +80,12 @@ input[type=text], select, textarea {
         margin-top: 6px;
         color: #fffffe;
         text-decoration: black;
+    }
+
+    .col-75 {
+        float: left;
+        width: 75%;
+        margin-top: 6px;
         }
+
+    
