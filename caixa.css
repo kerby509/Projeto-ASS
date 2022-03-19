@@ -1,7 +1,7 @@
 
 h1{
     text-align: center;
-    color: #7fff00;
+    color: #0000ff	;
 }
 
 body {
@@ -29,7 +29,7 @@ input[type=text], select, textarea {
  }
 
     input[type=submit] {
-        background-color:  #7fff00	;
+        background-color: #0000ff;/* #7fff00*/
         color: white;
         padding: 12px 20px;
         border: none;
@@ -50,7 +50,7 @@ input[type=text], select, textarea {
     .container {
         width: 700px;
         height: 580px;
-        background: #adff2f;
+        background: #000080;/*#adff2f*/
         position: absolute;
         top: 200px;
         left: 280px;
