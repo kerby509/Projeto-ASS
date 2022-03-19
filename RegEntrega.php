@@ -34,7 +34,7 @@ echo"Aqui é parte de registra entrega"
       <label for="cpf">CPF</label>
     </div>
     <div class="col-75">
-      <input type="text" id="cpf" name="cpf" placeholder=" Digite cpf ">
+      <input type="text" id="cpf" name="cpf" placeholder=" Digite cpf "required>
     </div>
   </div>
   <div class="row">
@@ -42,7 +42,7 @@ echo"Aqui é parte de registra entrega"
       <label for="nome">Nome</label>
     </div>
     <div class="col-75">
-      <input type="text" id="nome" name="nome" placeholder="Digite nome">
+      <input type="text" id="nome" name="nome" placeholder="Digite nome"required>
     </div>
   </div>
   <div class="row">
@@ -50,7 +50,7 @@ echo"Aqui é parte de registra entrega"
       <label for="modelo">Modelo</label>
     </div>
     <div class="col-75">
-      <input type="text" id="modelo" name="modelo" placeholder="Digite o modelo">
+      <input type="text" id="modelo" name="modelo" placeholder="Digite o modelo"required>
     </div>
   </div>
   <div class="row">
@@ -58,7 +58,7 @@ echo"Aqui é parte de registra entrega"
       <label for="servico">Serviços</label>
     </div>
     <div class="col-75">
-      <input type="text" id="servico" name="servico" placeholder="Digite o serviço realizado">
+      <input type="text" id="servico" name="servico" placeholder="Digite o serviço realizado" required>
     </div>
   </div>
 
