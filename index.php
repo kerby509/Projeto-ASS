@@ -41,7 +41,7 @@
                     <ul>
                         <li><a href="cadcliente.php">Registra Cliente</a></li>
                         <li><a href="cadFunc.php">Cadastrar Funcionario</a></li>
-                        <li><a href="RegEntrega">Registra entrega</a></li>
+                        <li><a href="RegEntrega.php">Registra entrega</a></li>
                         <li><a href="contato.html">Atualizar Lista</a></li>
                         <li><a href="contato.html">Excluir Serviços</a></li>
                         <li><a href="contato.html">Consulta Lista</a></li>
