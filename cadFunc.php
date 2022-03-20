@@ -1,6 +1,30 @@
 <?php
+//include 'db.php';
 
 
+session_start();
+
+if(@$_POST['cpf']&&
+  @_POST['nome']&&
+  @$_POST['email']&&
+  @$_POST['endereco']&&
+  @$_POST['telefone']&&
+  @_POST['senha']){
+    $sql=$db->prepare("INSERT INTO usuarios(cpf,nome,email,endereco,telefone) VALUES (:cpf,:nome,:email,:endereco,:telefone)");
+    $sql->bindParam('cpf', $_POST['cpf'], PDO::PARAM_STR);
+    $sql->bindParam('nome', $_POST['nome'], PDO::PARAM_STR);
+    $sql->bindParam('email', $_POST['email'], PDO::PARAM_STR);
+    $sql->bindParam('endereco', $_POST['endereco'], PDO::PARAM_STR);
+    $sql->bindParam('telefone', $_POST['telefone']);
+    $sql->bindParam('senha', $_POST['senha'], PDO::PARAM_STR);
+
+    $sql->execute();
+
+      $_SESSION['autenticados']=1;
+      header('Location: index.php');
+      exit();
+
+  }
 
 
 
@@ -48,7 +72,7 @@
   </div>
   <div class="row">
     <div class="col-25">
-      <label for="modelo">Email</label>
+      <label for="modelo">E-mail</label>
     </div>
     <div class="col-75">
       <input type="text" id="email" name="email" placeholder="Digite o email"required>
@@ -71,6 +95,16 @@
     </div>
     <div class="col-75">
       <input type="text" id="telefone" name="telefone" placeholder="(xx)xxxxxxxxx"required>
+    </div>
+    
+  </div>
+
+  <div class="row">
+    <div class="col-25">
+      <label for="telefone">Senha</label>
+    </div>
+    <div class="col-75">
+      <input type="Password" id="senha" name="senha" placeholder="password"required>
     </div>
     
   </div>
