@@ -28,7 +28,7 @@ echo"Aqui é parte de registra entrega"
 <div class="container">
   <a href="index.php"><button>Voltar</button></a>
  
-  <form action="" method= "POST">
+  <form action="RegEntrega.php" method= "POST">
   <div class="row">
     <div class="col-25">
       <label for="cpf">CPF</label>
@@ -80,10 +80,10 @@ echo"Aqui é parte de registra entrega"
 
   <div class="row">
     <div class="col-25">
-      <label for="lname">Celular</label>
+      <label for="lname">Telefone</label>
     </div>
     <div class="col-75">
-      <input type="text" id="lname" name="celular" placeholder="(xx)xxxxxxxxx">
+      <input type="text" id="telefone" name="telefone" placeholder="(xx)xxxxxxxxx">
     </div>
     
   </div>
