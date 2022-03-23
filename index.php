@@ -47,11 +47,6 @@
                         <li><a href="contato.html">Lista de Peças</a></li>
                         
 
-
-
-
-
-
                     </ul>
                 </nav>
             </div>

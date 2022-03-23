@@ -25,20 +25,20 @@ try {
 
     // "Conecta" com o banco de dados
     $db = new PDO("sqlite:$arquivo");
-
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     if ($deve_inicializar_banco) {
         // Cria as tabelas no banco de dados para uso futuro
         $db->exec('CREATE TABLE usuarios (
             id INTEGER PRIMARY KEY,
             nome TEXT,
-            email TEXT,
+            cpf TEXT,
             telefone TEXT,
-            datedeentrega datetime,
+            datadeentrega TEXT,
             modelo TEXT,
-            serviços TEXT,
-            senha TEXT,
+            servicos TEXT,
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP
-        )');  
+        )'); 
+        
     }
 } catch (PDOException $e) {
     echo 'Erro com o banco de dados: ' . $e->getMessage();
