@@ -3,12 +3,25 @@
 include'css/styles.css';
 //include'db.php';
 
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
+
 // sa c pou lew fin fe cadastra a pou cliente resgistre nan sistem nan
 // $sql=$db->prepare("SELECT * FROM usuarios WHERE email=:email and senha=:senha");
 // $sql->bindParam('email', $_POST['email'], PDO::PARAM_STR);
 // $sql->bindParam('senha', $_POST['senha'], PDO::PARAM_STR);
 // $sql->execute();
 // $data = $sql->fetch();
+
+
+//pukisa c nn login nn ou fè saaa
+// $comando=$db->prepare("SELECT * FROM usuarios WHERE email=:email and senha=:senha");
+// $comando->bindParam('email', $_POST['email'], PDO::PARAM_STR);
+// $comando->bindParam('senha', $_POST['senha'], PDO::PARAM_STR);
+// $$comando->execute();
+// $data = $comando->fetch();
+
 
 session_start();
 //if($data){

@@ -5,11 +5,12 @@
     justify-content: center;
     min-height: 100vh;
     padding: 0 2rem;
-    background-image: url(assets/fundo.jpeg)
+    background-image: url(assets/fundo.jpeg);
+
 }
 
  form{
-    background:red;
+    background:#7fffd4	;
     width: 100%;
     max-width: 480px;
     padding: 0.5rem;
@@ -18,6 +19,11 @@
 .caixa{
     text-align: center;
 }
+input{
+    border-radius: 5px;
+}
+
+
 
 
 /*Css da pagina inicial*/

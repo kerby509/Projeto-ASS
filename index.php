@@ -11,6 +11,8 @@
     //include 'barra_de_navigação.php';
 
 ?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -19,7 +21,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width= device-width">
-    <title>Mega Assistencia Técnica</title>
+    <title>Mega Assistência Técnica</title>
     
 
     </head>
@@ -29,7 +31,7 @@
     <header>
     <h2><a class="log" href="logout.php">Logout</a></h2>
 
-        <h1 class="titulopricinpal">Mega Assistencia Técnica</h1>
+        <h1 class="titulopricinpal">Mega Assistência Técnica</h1>
 
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
@@ -38,15 +40,14 @@
                 <nav>
                     <ul>
                         <li><a href="cadcliente.php">Registra Cliente</a></li>
-                        <li><a href="produtos.html">Cadastrar Funcionario</a></li>
-                        <li><a href="contato.html">Registra entrega</a></li>
+                        <li><a href="cadFunc.php">Cadastrar Funcionario</a></li>
+                        <li><a href="RegEntrega">Registra entrega</a></li>
                         <li><a href="contato.html">Atualizar Lista</a></li>
-                        <li><a href="contato.html">excluir Serviços</a></li>
+                        <li><a href="contato.html">Excluir Serviços</a></li>
                         <li><a href="contato.html">Consulta Lista</a></li>
                         <li><a href="contato.html">Registra Pagamemto</a></li>
                         <li><a href="contato.html">Lista de Peças</a></li>
                         
-
                     </ul>
                 </nav>
             </div>
@@ -55,11 +56,11 @@
     <img class="banner" src="assets/image1.jpeg">
     <main>
         <section class="principal">
-            <h2 class="titulo-principal">Sobre Mega Assistencia Técnica</h2>
-            <img class="utensilios" src="assets/utensilos.jpeg" alt="utensilios soverteria">
+            <h2 class="titulo-principal">Sobre Mega Assistência Técnica</h2>
+            <img class="utensilios" src="assets/utensilos.jpeg" alt="utensilios Mega">
 
-            <p>Localizada no centro da cidade<strong> Mega Assistencia </strong> traz para o mercado
-                oa melhor solução para o seu celular. Fundada em 2021, a Mega Assistencia já é destaque na cidade
+            <p>Localizada no centro da cidade<strong> Mega Assistência </strong> traz para o mercado
+                oa melhor solução para o seu celular. Fundada em 2021, a Mega Assistência já é destaque na cidade
                 e conquista novos clientes cada dias.</p>
 
             <p id="missao" ><em>Nossa missão é :<strong> "proporcionar a qualidade
@@ -111,7 +112,7 @@
 
     <footer>
         <img src="">
-        <p>&copy; Copyright Mega Assistencia Técnica-2022</p>
+        <p>&copy; Copyright Mega Assistência Técnica-2022</p>
         <p>All rights reserved.</p>
     </footer>
 </body>
