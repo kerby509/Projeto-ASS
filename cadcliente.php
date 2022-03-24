@@ -2,28 +2,20 @@
 
 include 'db.php';
 //include "consulta.php";
-// session_start();
+ //session_start();
 
-// if(@$_POST['nome']&&
-//   //@_POST['email']&&
-//   @$_POST['cpf']&&
-//   @$_POST['telefone']&&
-//   @$_POST['data de entrega']&&
-//   @$_POST['modelo']&&
-//   @$_POST['serviços']){
-  //@_POST['senha']){
 try{
   $nome= '';
   $cpf= '';
   $telefone= '';
   $datadeentrega= '';
   $modelo= '';
-  $serciços='';
+  $sercicos='';
 
   
-//   ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
   if(@$_POST['nome']){
 
@@ -35,7 +27,7 @@ try{
       $comando->bindParam('telefone', $_POST['telefone'], PDO::PARAM_STR);
       $comando->bindParam('datadeentrega', $_POST['data_de_entrega']);
       $comando->bindParam('modelo', $_POST['modelo'], PDO::PARAM_STR);
-      $comando->bindParam('servicos', $_POST['serviços'], PDO::PARAM_STR);
+      $comando->bindParam('servicos', $_POST['servicos'], PDO::PARAM_STR);
       $comando->execute();
     }
 
@@ -44,50 +36,24 @@ try{
     echo 'Erro ao executar comando no banco de dados: ' . $e->getMessage();
     exit();
 }
-// session_start();
+ session_start();
 
-// if(@$_POST['nome']&&
+ if(@$_POST['nome']&&
 //   //@_POST['email']&&
-//   @$_POST['cpf']==''&&
-//   @$_POST['telefone']==''&&
-//   @$_POST['data de entrega']==''&&
-//   @$_POST['modelo']==''&&
-//   @$_POST['serviços']==''){
+   @$_POST['cpf']==''&&
+   @$_POST['telefone']==''&&
+   @$_POST['data de entrega']==''&&
+   @$_POST['modelo']==''&&
+   @$_POST['servicos']==''){
 //   //@_POST['senha']){
-//       $_SESSION['autenticados']=1;
+       $_SESSION['autenticados']=1;
 //       header('Location: index.php');
-//       exit();
+       exit();
 
-//   }
-//include 'db.php';
-session_start();
+   }
 
-// if(@$_POST['cpf']&&
-//   @_POST['nome']&&
-//   @$_POST['email']&&
-//   @$_POST['telefone']&&
-//   @$_POST['data de entrega']&&
-//   @$_POST['modelo']&&
-//   @$_POST['servicos']){
-//     $sql=$db->prepare("INSERT INTO usuarios(cpf,nome,email,telefone,datadeentrega,modelo,servicos) VALUES ,:cpf,:nome,:email,:telefone,:data de entrega,:modelo,servicos)");
-//     $sql->bindParam('nome', $_POST['nome'], PDO::PARAM_STR);
-//     $sql->bindParam('email', $_POST['email'], PDO::PARAM_STR);
-//     $sql->bindParam('cpf', $_POST['cpf'], PDO::PARAM_STR);
-//     $sql->bindParam('telefone', $_POST['telefone'], PDO::PARAM_STR);
-//     $sql->bindParam('data de entrega', $_POST['data de entrega']);
-//     $sql->bindParam('modelo', $_POST['modelo'], PDO::PARAM_STR);
-//     $sql->bindParam('serviços', $_POST['serviços'], PDO::PARAM_STR);
-//     $sql->execute();
 
-//       $_SESSION['autenticados']=1;
-//       header('Location: index.php');
-//       exit();
 
-//   }
-  //include 'barra_de_navigação.php';
-
-  //var_dump($_POST);
-  //exit();
 ?>
 
  <form className="form" action="cadcliente.php" method="post" >
