@@ -2,8 +2,6 @@
 
 include 'db.php';
 //include "consulta.php";
- //session_start();
-
 try{
   $nome= '';
   $cpf= '';
@@ -13,9 +11,9 @@ try{
   $sercicos='';
 
   
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 
   if(@$_POST['nome']){
 
@@ -47,7 +45,7 @@ error_reporting(E_ALL);
    @$_POST['servicos']==''){
 //   //@_POST['senha']){
        $_SESSION['autenticados']=1;
-//       header('Location: index.php');
+       header('Location: index.php');
        exit();
 
    }
@@ -56,7 +54,67 @@ error_reporting(E_ALL);
 
 ?>
 
+<<<<<<< HEAD
  
+=======
+ <!-- <form className="form" action="cadcliente.php" method="post" >
+<table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
+        
+    <div align="center">
+    <h1>Cadastra Cliente</h1>
+
+    <tr>
+     <td width="24%" height="25"><font face="Arial" size="2">Nome:</font></td>
+     <td height="25" width="76%"><font face="Arial" size="2">
+     <input type="text" name="nome" size="20"></font></td>
+    </tr>
+
+    
+    <tr>
+     <td height="25" width="24%"><font face="Arial" size="2">CPF:</font></td>
+     <td height="25" width="76%"><font face="Arial" size="2">
+     <input type="text" name="cpf" size="20"></font></td>
+    </tr>
+
+
+    <tr>
+     <td height="25" width="24%"><font face="Arial" size="2">Telefone:</font></td>
+     <td height="25" width="76%"><font face="Arial" size="2">
+     <input type="text" name="telefone" size="20"></font></td>
+    </tr>
+
+    <tr>
+     <td height="25" width="24%"><font face="Arial" size="2">Date de entrega:</font></td>
+     <td height="25" width="76%"><font face="Arial" size="2">
+     <input type="date" name="data de entrega"
+        placeholder="dd-mm-yyyy" value=""
+        min="1997-01-01" max="2030-12-31">
+      
+     
+    </tr>
+
+    <tr>
+     <td height="25" width="24%"><font face="Arial" size="2">Modelo:</font></td>
+     <td height="25" width="76%"><font face="Arial" size="2">
+     <input type="text" name="modelo" size="20"></font></td>
+    </tr>
+
+    <tr>
+     <td height="25" width="24%"><font face="Arial" size="2">Serviços:</font></td>
+     <td height="25" width="76%"><font face="Arial" size="2">
+     <input type="text" name="serviços" size="20"></font></td>
+    </tr>
+
+
+    <tr>
+     <td height="30" colspan="2">
+     <text-align="center">
+     <input type="submit"name="cadastrar" value="Cadastrar cliente &gt;&gt;"/>
+     
+    </tr>
+   </table> 
+   </form> -->
+>>>>>>> 36464cde390ab656f8b319b945242eade4dae75d
    
 <!DOCTYPE html>
 <html lang="pt-br">

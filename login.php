@@ -1,11 +1,11 @@
 <?php
  
 include'css/styles.css';
-//include'db.php';
+include'db.php';
 
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 // sa c pou lew fin fe cadastra a pou cliente resgistre nan sistem nan
 // $sql=$db->prepare("SELECT * FROM usuarios WHERE email=:email and senha=:senha");
@@ -16,6 +16,13 @@ include'css/styles.css';
 
 
 //pukisa c nn login nn ou fè saaa
+<<<<<<< HEAD
+$comando=$db->prepare("SELECT * FROM funcionario WHERE email=:email and senha=:senha");
+$comando->bindParam('email', $_POST['email'], PDO::PARAM_STR);
+$comando->bindParam('senha', $_POST['senha'], PDO::PARAM_STR);
+$$comando->execute();
+$data = $comando->fetch();
+=======
 <<<<<<< HEAD
 // $sql=$db->prepare("SELECT * FROM usuarios WHERE email=:email and senha=:senha");
 // $sql->bindParam('email', $_POST['email'], PDO::PARAM_STR);
@@ -28,22 +35,19 @@ include'css/styles.css';
 // $comando->bindParam('senha', $_POST['senha'], PDO::PARAM_STR);
 // $$comando->execute();
 // $data = $comando->fetch();
+>>>>>>> 527898ccc7cf624955c63bd1aec4c5b250498621
 
 >>>>>>> 5b252521811a4b54a9fe79e616c93b000aaa35b8
 
 session_start();
-//if($data){
-    if(@$_POST['usuario']=='megas'&&
-    @$_POST['senha']=='1234'){
+if($data){
+    // if(@$_POST['usuario']==''&&
+    // @$_POST['senha']==''){
         $_SESSION['autenticados']=1;
         header('Location: index.php');
         exit();
     }
-
-
 //include 'barra_de_navigação.php';
-
-
 ?>
 
 <html>

@@ -1,37 +1,53 @@
 <?php
-//include 'db.php';
+include 'db.php';
+//include "consulta.php";
+try{
+  $cpf='';
+  $nome= '';
+  $email= '';
+  $endereco= '';
+  $telefone= '';
+  $senha= '';
+  
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
+
+  if(@$_POST['nome']){
+
+      //var_dump($db);exit;
+      $comando= $db->prepare("INSERT INTO funcionario(cpf,nome,email,endereco,telefone,senha) VALUES (:cpf,:nome,:email,:endereco,:telefone,:senha)");
+      
+      $comando->bindParam('cpf', $_POST['cpf'], PDO::PARAM_STR);
+      $comando->bindParam('nome', $_POST['nome'], PDO::PARAM_STR);
+      $comando->bindParam('email', $_POST['email'], PDO::PARAM_STR);
+      $comando->bindParam('endereco', $_POST['endereco'], PDO::PARAM_STR);
+      $comando->bindParam('telefone', $_POST['telefone'], PDO::PARAM_STR);
+      $comando->bindParam('senha', $_POST['senha'], PDO::PARAM_STR);
+
+      $comando->execute();
+    }
 
 
-session_start();
+} catch (PDOException $e) {
+    echo 'Erro ao executar comando no banco de dados: ' . $e->getMessage();
+    exit();
+}
+ session_start();
 
-if(@$_POST['cpf']&&
-  @_POST['nome']&&
-  @$_POST['email']&&
-  @$_POST['endereco']&&
-  @$_POST['telefone']&&
-  @_POST['senha']){
-    $sql=$db->prepare("INSERT INTO usuarios(cpf,nome,email,endereco,telefone) VALUES (:cpf,:nome,:email,:endereco,:telefone)");
-    $sql->bindParam('cpf', $_POST['cpf'], PDO::PARAM_STR);
-    $sql->bindParam('nome', $_POST['nome'], PDO::PARAM_STR);
-    $sql->bindParam('email', $_POST['email'], PDO::PARAM_STR);
-    $sql->bindParam('endereco', $_POST['endereco'], PDO::PARAM_STR);
-    $sql->bindParam('telefone', $_POST['telefone']);
-    $sql->bindParam('senha', $_POST['senha'], PDO::PARAM_STR);
+ if(@$_POST['cpf']&&
+    @_POST['nome']&&
+   @$_POST['email']==''&&
+   @$_POST['endereco']==''&&
+   @$_POST['telefone']==''&&
+   @_POST['senha']){
+       $_SESSION['autenticados']=1;
+       header('Location: index.php');
+       exit();
 
-    $sql->execute();
-
-      $_SESSION['autenticados']=1;
-      header('Location: index.php');
-      exit();
-
-  }
-
-
-
+   }
 
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
