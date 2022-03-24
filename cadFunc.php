@@ -47,11 +47,13 @@ if(@$_POST['cpf']&&
 <body>
 
 <br>
-<h1>Cadastra Funcionário</h1>
+<!-- <h1>Cadastra Funcionário</h1> -->
 
 
 <div class="container">
   <a href="index.php"><button>Voltar</button></a>
+  <h1>Cadastra Funcionário</h1>
+
  
   <form action="cadFunc.php" method= "POST">
   <div class="row">
