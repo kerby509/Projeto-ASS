@@ -1,11 +1,11 @@
 <?php
  
 include'css/styles.css';
-//include'db.php';
+include'db.php';
 
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 // sa c pou lew fin fe cadastra a pou cliente resgistre nan sistem nan
 // $sql=$db->prepare("SELECT * FROM usuarios WHERE email=:email and senha=:senha");
@@ -16,26 +16,22 @@ include'css/styles.css';
 
 
 //pukisa c nn login nn ou fè saaa
-// $comando=$db->prepare("SELECT * FROM usuarios WHERE email=:email and senha=:senha");
-// $comando->bindParam('email', $_POST['email'], PDO::PARAM_STR);
-// $comando->bindParam('senha', $_POST['senha'], PDO::PARAM_STR);
-// $$comando->execute();
-// $data = $comando->fetch();
+$comando=$db->prepare("SELECT * FROM funcionario WHERE email=:email and senha=:senha");
+$comando->bindParam('email', $_POST['email'], PDO::PARAM_STR);
+$comando->bindParam('senha', $_POST['senha'], PDO::PARAM_STR);
+$$comando->execute();
+$data = $comando->fetch();
 
 
 session_start();
-//if($data){
-    if(@$_POST['usuario']=='megas'&&
-    @$_POST['senha']=='1234'){
+if($data){
+    // if(@$_POST['usuario']==''&&
+    // @$_POST['senha']==''){
         $_SESSION['autenticados']=1;
         header('Location: index.php');
         exit();
     }
-
-
 //include 'barra_de_navigação.php';
-
-
 ?>
 
 <html>

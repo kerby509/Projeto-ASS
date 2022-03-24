@@ -2,8 +2,6 @@
 
 include 'db.php';
 //include "consulta.php";
- //session_start();
-
 try{
   $nome= '';
   $cpf= '';
@@ -13,9 +11,9 @@ try{
   $sercicos='';
 
   
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 
   if(@$_POST['nome']){
 
@@ -47,7 +45,7 @@ error_reporting(E_ALL);
    @$_POST['servicos']==''){
 //   //@_POST['senha']){
        $_SESSION['autenticados']=1;
-//       header('Location: index.php');
+       header('Location: index.php');
        exit();
 
    }
@@ -56,7 +54,7 @@ error_reporting(E_ALL);
 
 ?>
 
- <form className="form" action="cadcliente.php" method="post" >
+ <!-- <form className="form" action="cadcliente.php" method="post" >
 <table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
         
     <div align="center">
@@ -112,7 +110,7 @@ error_reporting(E_ALL);
      
     </tr>
    </table> 
-   </form>
+   </form> -->
    
 <!DOCTYPE html>
 <html lang="pt-br">

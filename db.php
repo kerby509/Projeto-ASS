@@ -38,7 +38,20 @@ try {
             servicos TEXT,
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP
         )'); 
-        
+       
+       $db->exec('CREATE TABLE funcionario(
+           id INTEGER PRIMARY KEY,
+           cpf  TEXT,
+           nome TEXT,
+           email TEXT,
+           endereco TEXT,
+           telefone TEXT,
+           senha TEXT,
+           created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+       )');
+
+
+
     }
 } catch (PDOException $e) {
     echo 'Erro com o banco de dados: ' . $e->getMessage();
