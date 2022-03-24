@@ -16,12 +16,28 @@ error_reporting(E_ALL);
 
 
 //pukisa c nn login nn ou fè saaa
+<<<<<<< HEAD
 $comando=$db->prepare("SELECT * FROM funcionario WHERE email=:email and senha=:senha");
 $comando->bindParam('email', $_POST['email'], PDO::PARAM_STR);
 $comando->bindParam('senha', $_POST['senha'], PDO::PARAM_STR);
 $$comando->execute();
 $data = $comando->fetch();
+=======
+<<<<<<< HEAD
+// $sql=$db->prepare("SELECT * FROM usuarios WHERE email=:email and senha=:senha");
+// $sql->bindParam('email', $_POST['email'], PDO::PARAM_STR);
+// $sql->bindParam('senha', $_POST['senha'], PDO::PARAM_STR);
+// $sql->execute();
+// $data = $sql->fetch();
+=======
+// $comando=$db->prepare("SELECT * FROM usuarios WHERE email=:email and senha=:senha");
+// $comando->bindParam('email', $_POST['email'], PDO::PARAM_STR);
+// $comando->bindParam('senha', $_POST['senha'], PDO::PARAM_STR);
+// $$comando->execute();
+// $data = $comando->fetch();
+>>>>>>> 527898ccc7cf624955c63bd1aec4c5b250498621
 
+>>>>>>> 5b252521811a4b54a9fe79e616c93b000aaa35b8
 
 session_start();
 if($data){
@@ -59,7 +75,6 @@ if($data){
 
              <div style="text-align: center;
                 margin-top: 0.5rem;">                    
-             <button type="submit">Cadastra Administrador</button>
              </div>
        
         

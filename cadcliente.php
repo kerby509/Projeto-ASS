@@ -126,11 +126,13 @@ try{
 <body>
 
 <br>
-<h1>Cadastra Cliente</h1>
+<!-- <h1>Cadastra Cliente</h1> -->
 
 
 <div class="container">
   <a href="index.php"><button>Voltar</button></a>
+  <h1>Cadastra Cliente</h1>
+
  
   <form action="cadcliente.php" method= "POST">
   <div class="row">

@@ -22,11 +22,13 @@ echo"Aqui é parte de registra entrega"
 <body>
 
 <br>
-<h1>Registra Entrega</h1>
+<!-- <h1>Registra Entrega</h1> -->
 
 
 <div class="container">
   <a href="index.php"><button>Voltar</button></a>
+  <h1>Registra Entrega</h1>
+
  
   <form action="RegEntrega.php" method= "POST">
   <div class="row">
