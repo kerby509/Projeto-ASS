@@ -2,6 +2,8 @@
 session_start();
  
 include'css/styles.css';
+<<<<<<< HEAD
+=======
 include'db.php';
 
 ini_set('display_errors', 1);
@@ -17,15 +19,27 @@ $comando->execute();
 $data = $comando->fetchAll();
 var_dump($data);
 
+<<<<<<< HEAD
 //session_start();
 if($data){
     // if(@$_POST['usuario']==''&&
     // @$_POST['senha']==''){
+=======
+>>>>>>> e41af12e354e96ff687d6a47f5d640d3232cec90
+session_start();
+//if($data){
+    if(@$_POST['usuario']=='megas'&&
+    @$_POST['senha']=='1234'){
+>>>>>>> fcbd818a63b741af8f39837e971ee61c7b842c99
         $_SESSION['autenticados']=1;
         header('Location: index.php');
         exit();
     }
+
+
 //include 'barra_de_navigação.php';
+
+
 ?>
 
 <html>
