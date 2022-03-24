@@ -1,6 +1,23 @@
 <?php
  
 include'css/styles.css';
+<<<<<<< HEAD
+=======
+include'db.php';
+
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
+
+//pukisa c nn login nn ou fè saaa
+$comando=$db->prepare("SELECT * FROM funcionario WHERE email=:email and senha=:senha");
+$comando->bindParam('email', $_POST['email'], PDO::PARAM_STR);
+$comando->bindParam('senha', $_POST['senha'], PDO::PARAM_STR);
+$$comando->execute();
+$data = $comando->fetch();
+
+
+>>>>>>> e41af12e354e96ff687d6a47f5d640d3232cec90
 session_start();
 //if($data){
     if(@$_POST['usuario']=='megas'&&

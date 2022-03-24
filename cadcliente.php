@@ -55,6 +55,8 @@ try{
 ?>
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
  
 =======
  <!-- <form className="form" action="cadcliente.php" method="post" >
@@ -115,6 +117,7 @@ try{
    </table> 
    </form> -->
 >>>>>>> 36464cde390ab656f8b319b945242eade4dae75d
+>>>>>>> b290c42dcc8158386083df1e0a811acd37a8c8a8
    
 <!DOCTYPE html>
 <html lang="pt-br">
