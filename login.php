@@ -1,21 +1,23 @@
 <?php
+session_start();
  
 include'css/styles.css';
 include'db.php';
 
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 //pukisa c nn login nn ou fè saaa
 $comando=$db->prepare("SELECT * FROM funcionario WHERE email=:email and senha=:senha");
 $comando->bindParam('email', $_POST['email'], PDO::PARAM_STR);
+var_dump($_POST);
 $comando->bindParam('senha', $_POST['senha'], PDO::PARAM_STR);
-$$comando->execute();
-$data = $comando->fetch();
+$comando->execute();
+$data = $comando->fetchAll();
+var_dump($data);
 
-
-session_start();
+//session_start();
 if($data){
     // if(@$_POST['usuario']==''&&
     // @$_POST['senha']==''){
@@ -37,7 +39,7 @@ if($data){
           <div class="caixa">
                 <h1 >Acessar ao Sistema</h1>
                 <p>Digite seu E-mail</p>
-                <input type="text" name="usuario">
+                <input type="text" name="email">
                 <p>Digite sua senha</p>
                 <input type="password" name="senha" > 
             </div>
