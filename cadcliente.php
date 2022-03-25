@@ -54,70 +54,7 @@ try{
 
 ?>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
- 
-=======
- <!-- <form className="form" action="cadcliente.php" method="post" >
-<table width="80%" border="0" cellspacing="0" cellpadding="0" align="center">
-        
-    <div align="center">
-    <h1>Cadastra Cliente</h1>
 
-    <tr>
-     <td width="24%" height="25"><font face="Arial" size="2">Nome:</font></td>
-     <td height="25" width="76%"><font face="Arial" size="2">
-     <input type="text" name="nome" size="20"></font></td>
-    </tr>
-
-    
-    <tr>
-     <td height="25" width="24%"><font face="Arial" size="2">CPF:</font></td>
-     <td height="25" width="76%"><font face="Arial" size="2">
-     <input type="text" name="cpf" size="20"></font></td>
-    </tr>
-
-
-    <tr>
-     <td height="25" width="24%"><font face="Arial" size="2">Telefone:</font></td>
-     <td height="25" width="76%"><font face="Arial" size="2">
-     <input type="text" name="telefone" size="20"></font></td>
-    </tr>
-
-    <tr>
-     <td height="25" width="24%"><font face="Arial" size="2">Date de entrega:</font></td>
-     <td height="25" width="76%"><font face="Arial" size="2">
-     <input type="date" name="data de entrega"
-        placeholder="dd-mm-yyyy" value=""
-        min="1997-01-01" max="2030-12-31">
-      
-     
-    </tr>
-
-    <tr>
-     <td height="25" width="24%"><font face="Arial" size="2">Modelo:</font></td>
-     <td height="25" width="76%"><font face="Arial" size="2">
-     <input type="text" name="modelo" size="20"></font></td>
-    </tr>
-
-    <tr>
-     <td height="25" width="24%"><font face="Arial" size="2">Serviços:</font></td>
-     <td height="25" width="76%"><font face="Arial" size="2">
-     <input type="text" name="serviços" size="20"></font></td>
-    </tr>
-
-
-    <tr>
-     <td height="30" colspan="2">
-     <text-align="center">
-     <input type="submit"name="cadastrar" value="Cadastrar cliente &gt;&gt;"/>
-     
-    </tr>
-   </table> 
-   </form> -->
->>>>>>> 36464cde390ab656f8b319b945242eade4dae75d
->>>>>>> b290c42dcc8158386083df1e0a811acd37a8c8a8
    
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -133,7 +70,6 @@ try{
 <body>
 
 <br>
-<!-- <h1>Cadastra Cliente</h1> -->
 
 
 <div class="container">
