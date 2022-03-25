@@ -4,6 +4,10 @@ h1{
     color: #0000ff	;
 }
 
+h2{
+    text-align: center;
+}
+
 body {
     background-image: url('assets/fundo.jpeg');
     background-repeat: no-repeat;
