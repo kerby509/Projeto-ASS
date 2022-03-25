@@ -45,9 +45,8 @@
       <input type="text" id="nome" name="nome" placeholder="Digite nome do cliente"required>
     </div>
   </div>
-  <br>
-  <div class="row">
-    <input type="submit" value="Realizar Atualização" name="update"/>
+  <div class="atualiza">
+    <a href="Atualizar2.php">Realizar Atualização</a>
   </div>
 </form>
 </body>
