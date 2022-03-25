@@ -29,7 +29,7 @@
   <h2>Informa os dados do cliente deseja alterar</h2>
 
  
-  <form action="RegEntrega.php" method= "POST">
+  <form action="Atualizar2.php" method= "POST">
   <div class="row">
     <div class="col-25">
       <label for="cpf">CPF</label>
