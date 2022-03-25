@@ -28,7 +28,7 @@
   <h2>Informa o Cpf e o nome do cliente deseja alterar</h2>
 
  
-  <form action="cadcliente.php" method= "POST">
+  <form action="Atualizar1.php" method= "POST">
   <div class="row">
     <div class="col-25">
       <label for="cpf">CPF</label>
