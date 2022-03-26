@@ -43,7 +43,7 @@
                         <li><a href="cadFunc.php">Cadastrar Funcionario</a></li>
                         <li><a href="RegEntrega.php">Registra entrega</a></li>
                         <li><a href="Atualizar1.php">Atualizar Lista</a></li>
-                        <li><a href="contato.html">Excluir Serviços</a></li>
+                        <li><a href="Delete.php">Excluir Serviços</a></li>
                         <li><a href="contato.html">Consulta Lista</a></li>
                         <li><a href="contato.html">Registra Pagamemto</a></li>
                         <li><a href="contato.html">Lista de Peças</a></li>
