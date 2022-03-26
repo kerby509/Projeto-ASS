@@ -4,26 +4,32 @@
     <div style="width:150px; margin:auto; heigh:500px;margin-top:300px:background-color: blue;
 ">
 <?php
+session_start();
  
 include'css/styles.css';
 
 include'db.php';
 
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 //pukisa c nn login nn ou fè saaa
 $comando=$db->prepare("SELECT * FROM funcionario WHERE email=:email and senha=:senha");
 $comando->bindParam('email', $_POST['email'], PDO::PARAM_STR);
 $comando->bindParam('senha', $_POST['senha'], PDO::PARAM_STR);
-$$comando->execute();
+$comando->execute();
 $data = $comando->fetch();
 
+<<<<<<< HEAD
 session_start();
 //if($data){
     if(@$_POST['usuario']=='megas'&&
     @$_POST['senha']=='1234'){
+=======
+//session_start();
+if($data){
+>>>>>>> db18a190ad9922a0d2221dc3d6f95751c8e2e33f
         $_SESSION['autenticados']=1;
 
         echo '<meta http-equiv="refresh" content="2;url=index.php">';
@@ -37,7 +43,6 @@ session_start();
 
 
 //include 'barra_de_navigação.php';
-
 
 ?>
 </div>
@@ -53,7 +58,7 @@ session_start();
           <div class="caixa">
                 <h1 >Acessar ao Sistema</h1>
                 <p>Digite seu E-mail</p>
-                <input type="text" name="usuario">
+                <input type="text" name="email">
                 <p>Digite sua senha</p>
                 <input type="password" name="senha" > 
             </div>
