@@ -10,9 +10,9 @@ include'css/styles.css';
 
 include'db.php';
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 
 //pukisa c nn login nn ou fè saaa
 $comando=$db->prepare("SELECT * FROM funcionario WHERE email=:email and senha=:senha");
