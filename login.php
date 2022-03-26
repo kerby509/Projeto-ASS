@@ -21,15 +21,10 @@ $comando->bindParam('senha', $_POST['senha'], PDO::PARAM_STR);
 $comando->execute();
 $data = $comando->fetch();
 
-<<<<<<< HEAD
 session_start();
 //if($data){
     if(@$_POST['usuario']=='megas'&&
     @$_POST['senha']=='1234'){
-=======
-//session_start();
-if($data){
->>>>>>> db18a190ad9922a0d2221dc3d6f95751c8e2e33f
         $_SESSION['autenticados']=1;
 
         echo '<meta http-equiv="refresh" content="2;url=index.php">';
