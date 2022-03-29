@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html>
+    
+    <div style="width:150px; margin:auto; heigh:500px;margin-top:300px:background-color: blue;
+">
 <?php
 session_start();
  
@@ -9,27 +14,38 @@ include'db.php';
 // ini_set('display_startup_errors', 1);
 // error_reporting(E_ALL);
 
-//pukisa c nn login nn ou fè saaa
 $comando=$db->prepare("SELECT * FROM funcionario WHERE email=:email and senha=:senha");
 $comando->bindParam('email', $_POST['email'], PDO::PARAM_STR);
 $comando->bindParam('senha', $_POST['senha'], PDO::PARAM_STR);
 $comando->execute();
 $data = $comando->fetch();
 
-//session_start();
+session_start();
 if($data){
+    if(@$_POST['usuario']==''&&
+    @$_POST['senha']==''){
         $_SESSION['autenticados']=1;
-        header('Location: index.php');
+
+
+        echo '<meta http-equiv="refresh" content="2;url=index.php">';
+        echo '<progress max=100><strong>Progress:60%
+                done.</strong></progress><br>';
+        echo '<span class= "itext"> please wait.......... !...</span>';
+
+        // header('Location: index.php');
         exit();
+    
     }
+}
 
 
 //include 'barra_de_navigação.php';
 
 ?>
+</div>
 
-<html>
-<link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="styles.css">
 
 
     <div class="login" >
@@ -58,5 +74,7 @@ if($data){
         
 
         </form>
- </div>
+    </div>
+
+
 </html>

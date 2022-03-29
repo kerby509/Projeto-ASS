@@ -54,6 +54,11 @@ try{
    }
 
 ?>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 71ceed794bc25dbe609d9cc2b4dfe5223129b054
    
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -69,7 +74,6 @@ try{
 <body>
 
 <br>
-<!-- <h1>Cadastra Cliente</h1> -->
 
 
 <div class="container">
