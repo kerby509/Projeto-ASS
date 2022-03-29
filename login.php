@@ -22,8 +22,8 @@ $data = $comando->fetch();
 
 session_start();
 if($data){
-    if(@$_POST['usuario']==''&&
-    @$_POST['senha']==''){
+    //if(@$_POST['usuario']==''&&
+    //@$_POST['senha']==''){
         $_SESSION['autenticados']=1;
 
 
@@ -33,10 +33,10 @@ if($data){
         echo '<span class= "itext"> please wait.......... !...</span>';
 
         // header('Location: index.php');
-        exit();
-    
+        //exit();
+   // 
     }
-}
+//}
 
 
 //include 'barra_de_navigação.php';
