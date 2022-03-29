@@ -5,6 +5,7 @@ include'db.php';
 
 // sa c pou lew fin fe cadastra a pou cliente resgistre nan sistem nan
  $comando=$db->prepare("SELECT * FROM usuarios WHERE cpf=:cpf ");
+ //$comando=$db->prepare("SELECT * FROM usuarios u JOIN servicos s ON u.cpf = s.cpf ");
 //  $comando->bindParam(':cpf', $cpf, );
 $comando->bindParam('cpf', $_POST['cpf'], PDO::PARAM_STR);
  

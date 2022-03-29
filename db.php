@@ -29,13 +29,12 @@ try {
     if ($deve_inicializar_banco) {
         // Cria as tabelas no banco de dados para uso futuro
         $db->exec('CREATE TABLE usuarios (
-            id INTEGER PRIMARY KEY,
+            -- id INTEGER PRIMARY KEY,
+            cpf Varchar(11) PRIMARY KEY,
             nome TEXT,
-            cpf TEXT,
+            email TEXT,
             telefone TEXT,
-            datadeentrega TEXT,
-            modelo TEXT,
-            servicos TEXT,
+            
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP
         )'); 
        
@@ -49,6 +48,16 @@ try {
            senha TEXT,
            created_at DATETIME DEFAULT CURRENT_TIMESTAMP
        )');
+
+        $db->exec('CREATE TABLE ordem (
+            -- id INTEGER PRIMARY KEY,
+            cpf Varchar(11) PRIMARY KEY,
+            dataderetira TEXT,
+            modelo TEXT,
+            servicos TEXT,
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+        )'); 
+
 
 
 
