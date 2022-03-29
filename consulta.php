@@ -12,7 +12,7 @@ $comando->bindParam('cpf', $_POST['cpf'], PDO::PARAM_STR);
  $data = $comando->fetch();
 
  foreach($data as $linha){
-    //  echo'<p>'. $linha['nome']. ','. $linha['cpf'] . ','. $linha['telefone'] .','. $linha['datadeentrega'] .','. $linha['modelo'] .','. $linha['servicos'] .'</p>';
+    //echo'<p>'. $linha['nome']. ','. $linha['cpf'] . ','. $linha['telefone'] .','. $linha['datadeentrega'] .','. $linha['modelo'] .','. $linha['servicos'] .'</p>';
      
     /*echo'<p>'. .'</p>';
      echo'<p>'. $linha['telefone'].'</p>';
