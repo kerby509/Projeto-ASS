@@ -1,7 +1,45 @@
 <?php
+     
+include 'db.php';
+
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
+
+try {
+
+    $cpf = '' ;
+    $dataderetira = '';
+    $modelo = '';
+    $servicos = '';
+    
+    if(@$_POST['cpf']){
+        $cpf= $_POST['cpf'];
+        $dataderetira = $_POST['dataderetira'];
+        $modelo = $_POST['modelo'];       
+        $servicos = $_POST['servicos'];
+    $comando = $db->prepare('SELECT cpf FROM ordem WHERE cpf = :cpf');
+    $comando->bindParam(':cpf', $cpf);
+    $comando->execute();
+    $data=$comando->fetch();
+    if(!$data){
+        echo ' cpf não existe';
+    }
+
+    $comando = $db->prepare('UPDATE ordem SET dataderetira = :dataderetira, modelo = :modelo,servicos = :servicos WHERE cpf = :cpf');
+    $comando->bindParam(':cpf', $cpf);
+    $comando->bindParam(':dataderetira', $dataderetira);
+    $comando->bindParam(':modelo', $modelo);
+    $comando->bindParam(':servicos', $servicos);
+
+    $comando->execute();
 
 
-
+    }
+}catch (PDOException $e) {
+    echo 'Erro ao executar comando no banco de dados: ' . $e->getMessage();
+    exit();
+}
 
 ?>
 
@@ -40,11 +78,14 @@
   </div>
   <div class="row">
     <div class="col-25">
-      <label for="nome">Nome</label>
+      <label for="telefone">Data de retira</label>
     </div>
     <div class="col-75">
-      <input type="text" id="nome" name="nome" placeholder="Digite nome"required>
+      <input type="date" id="data de retira" name="data de retira" placeholder="dd-mm-yyyy"required>
     </div>
+    
+  </div>
+    
   </div>
   <div class="row">
     <div class="col-25">
@@ -59,36 +100,14 @@
       <label for="servico">Serviços</label>
     </div>
     <div class="col-75">
-      <input type="text" id="servico" name="servico" placeholder="Digite o serviço realizado" required>
+      <input type="text" id="servicos" name="servicos" placeholder="Digite o serviço realizado" required>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-25">
-      <label for="pag">Pagamento</label>
-    </div>
-    <div class="col-75">
-      <select id="pag" name="pagamento">
-        <option value="avista">Á Vista</option>
-        <option value="Boleto">Boleto</option>
-        <option value="Credito">Crédito</option>
-       
-      </select>
-    </div>
-    
-  </div>
+  
    
 
-  <div class="row">
-    <div class="col-25">
-      <label for="lname">Telefone</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="telefone" name="telefone" placeholder="(xx)xxxxxxxxx">
-    </div>
-    
-  </div>
-  <br>
+ 
   <br>
   <div class="row">
     <input type="submit" value="Atualizar" name="update"/>

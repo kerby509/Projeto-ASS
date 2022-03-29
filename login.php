@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     
-    <div style="width:150px; margin:auto; heigh:500px;margin-top:300px:background-color: blue;
+<div style="width:150px; margin:auto; heigh:500px;margin-top:300px:background-color: blue;
 ">
 <?php
 session_start();
@@ -22,8 +22,9 @@ $data = $comando->fetch();
 
 session_start();
 if($data){
-    if(@$_POST['usuario']==''&&
-    @$_POST['senha']==''){
+    // if(@$_POST['usuario']==''&&
+    // @$_POST['senha']=='')
+     {
         $_SESSION['autenticados']=1;
 
 
