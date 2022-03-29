@@ -5,10 +5,12 @@ include 'db.php';
 try{
   $nome= '';
   $cpf= '';
+  $email='';
   $telefone= '';
-  $datadeentrega= '';
-  $modelo= '';
-  $sercicos='';
+  
+  // $datadeentrega= '';
+  // $modelo= '';
+  // $sercicos='';
 
   
 // ini_set('display_errors', 1);
@@ -18,14 +20,15 @@ try{
   if(@$_POST['nome']){
 
       //var_dump($db);exit;
-      $comando= $db->prepare("INSERT INTO usuarios(nome,cpf,telefone,datadeentrega,modelo,servicos) VALUES (:nome,:cpf,:telefone,:datadeentrega,:modelo,:servicos)");
+      $comando= $db->prepare("INSERT INTO usuarios(nome,cpf,email,telefone) VALUES (:nome,:cpf,:email,:telefone)");
       
       $comando->bindParam('nome', $_POST['nome'], PDO::PARAM_STR);
       $comando->bindParam('cpf', $_POST['cpf'], PDO::PARAM_STR);
+      $comando->bindParam('email', $_POST['email'], PDO::PARAM_STR);
       $comando->bindParam('telefone', $_POST['telefone'], PDO::PARAM_STR);
-      $comando->bindParam('datadeentrega', $_POST['data_de_entrega']);
-      $comando->bindParam('modelo', $_POST['modelo'], PDO::PARAM_STR);
-      $comando->bindParam('servicos', $_POST['servicos'], PDO::PARAM_STR);
+      // $comando->bindParam('datadeentrega', $_POST['data_de_entrega']);
+      // $comando->bindParam('modelo', $_POST['modelo'], PDO::PARAM_STR);
+      // $comando->bindParam('servicos', $_POST['servicos'], PDO::PARAM_STR);
       $comando->execute();
     }
 
@@ -37,12 +40,12 @@ try{
  session_start();
 
  if(@$_POST['nome']&&
-//   //@_POST['email']&&
+    @_POST['email']&&
    @$_POST['cpf']==''&&
-   @$_POST['telefone']==''&&
-   @$_POST['data de entrega']==''&&
-   @$_POST['modelo']==''&&
-   @$_POST['servicos']==''){
+   @$_POST['telefone']==''){
+  //  @$_POST['data de entrega']==''&&
+  //  @$_POST['modelo']==''&&
+  //  @$_POST['servicos']==''){
 //   //@_POST['senha']){
        $_SESSION['autenticados']=1;
        header('Location: index.php');
@@ -50,11 +53,12 @@ try{
 
    }
 
-
-
 ?>
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 71ceed794bc25dbe609d9cc2b4dfe5223129b054
    
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -113,7 +117,7 @@ try{
     
   </div>
 
-  <div class="row">
+  <!-- <div class="row">
     <div class="col-25">
       <label for="telefone">Data Entrega</label>
     </div>
@@ -140,7 +144,7 @@ try{
     <div class="col-75">
       <input type="text" id="servicos" name="servicos" placeholder="Digite o serviço realizado" required>
     </div>
-  </div>
+  </div> -->
   <br>
   <br>
   <div class="row">
