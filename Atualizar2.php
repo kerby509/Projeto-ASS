@@ -83,19 +83,17 @@ try {
     <div class="col-75">
       <input type="date" id="data de retira" name="data de retira" placeholder="dd-mm-yyyy"required>
     </div>
-    
-  </div>
-    
-  </div>
-  <div class="row">
+     </div>
+
+     <div class="row">
     <div class="col-25">
       <label for="modelo">Modelo</label>
     </div>
     <div class="col-75">
       <input type="text" id="modelo" name="modelo" placeholder="Digite o modelo"required>
     </div>
-  </div>
-  <div class="row">
+
+    <div class="row">
     <div class="col-25">
       <label for="servico">Serviços</label>
     </div>
@@ -103,11 +101,8 @@ try {
       <input type="text" id="servicos" name="servicos" placeholder="Digite o serviço realizado" required>
     </div>
   </div>
-
+    
   
-   
-
- 
   <br>
   <div class="row">
     <input type="submit" value="Atualizar" name="update"/>
