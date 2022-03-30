@@ -44,8 +44,8 @@
                         <li><a href="RegEntrega.php">Registra entrega</a></li>
                         <li><a href="Atualizar2.php">Atualizar Lista</a></li>
                         <li><a href="Delete.php">Excluir Serviços</a></li>
-                        <li><a href="contato.html">Consulta Lista</a></li>
-                        <li><a href="contato.html">Registra Pagamemto</a></li>
+                        <li><a href="consulta.php">Consulta Lista</a></li>
+                        <li><a href="pagamento.php">Registra Pagamemto</a></li>
                         <li><a href="contato.html">Lista de Peças</a></li>
                         
                     </ul>
