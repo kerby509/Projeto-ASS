@@ -48,7 +48,6 @@ session_start();
     <title>Consulta Lista</title>
     
 </head>
-<!-- background-image: url(assets/fundo.jpeg) -->
 <body style="background-color:#7fffd4 ";
 ">
 
