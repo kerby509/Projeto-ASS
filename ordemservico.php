@@ -4,25 +4,31 @@ include 'db.php';
 //include "consulta.php";
 try{
   $cpf= '';
-  $dataderetira= '';
+  $nome= '';
+  $datadeentrada= '';
   $modelo= '';
   $sercicos='';
+  $dataderetira= '';
+  $valor= '';
 
   
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
   if(@$_POST['cpf']){
 
       //var_dump($db);exit;
-      $comando= $db->prepare("INSERT INTO ordem(cpf,dataderetira,modelo,servicos) VALUES (:cpf,:dataderetira,:modelo,:servicos)");
+      $comando= $db->prepare("INSERT INTO ordem(cpf,nome,datadeentrada,modelo,servicos,dataderetira,valor) VALUES (:cpf,:nome,:datadeentrada,:modelo,:servicos,:dataderetira,:valor)");
       
     
       $comando->bindParam('cpf', $_POST['cpf'], PDO::PARAM_STR);
-      $comando->bindParam('dataderetira', $_POST['data_de_retira']);
+      $comando->bindParam('nome', $_POST['nome'], PDO::PARAM_STR);
+      $comando->bindParam('datadeentrada', $_POST['datadeentrada']);
       $comando->bindParam('modelo', $_POST['modelo'], PDO::PARAM_STR);
       $comando->bindParam('servicos', $_POST['servicos'], PDO::PARAM_STR);
+      $comando->bindParam('dataderetira', $_POST['dataderetira']);
+      $comando->bindParam('valor', $_POST['valor'], PDO::PARAM_STR);
       $comando->execute();
     }
 
@@ -34,9 +40,12 @@ try{
  session_start();
 
  if( @$_POST['cpf']==''&&
-   @$_POST['data de retira']==''&&
+   @$_POST['nome']==''&&
+   @$_POST['datadeentrada']==''&&
    @$_POST['modelo']==''&&
-   @$_POST['servicos']==''){
+   @$_POST['servicos']==''&&
+   @$_POST['dataderetira']==''&&
+   @$_POST['valor']==''){
 //   //@_POST['senha']){
        //$_SESSION['autenticados']=1;
        //header('Location: index.php');
@@ -77,13 +86,23 @@ try{
       <input type="text" id="cpf" name="cpf" placeholder=" Digite cpf "required>
     </div>
   </div>
+
+
+  <div class="row">
+    <div class="col-25">
+      <label for="nome">Nome</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="nome" name="nome" placeholder="Digite nome do cliente"required>
+    </div>
+  </div>
    
   <div class="row">
     <div class="col-25">
-      <label for="telefone">Data de retira</label>
+      <label for="datadeentrada">Data de entrada</label>
     </div>
     <div class="col-75">
-      <input type="date" id="data de retira" name="data de retira" placeholder="dd-mm-yyyy"required>
+      <input type="date" id="datadeentrada" name="datadeentrada" placeholder="dd-mm-yyyy"required>
     </div>
     
   </div>
@@ -100,10 +119,29 @@ try{
 
   <div class="row">
     <div class="col-25">
-      <label for="servico">Serviços</label>
+      <label for="servicos">Serviços</label>
     </div>
     <div class="col-75">
       <input type="text" id="servicos" name="servicos" placeholder="Digite o serviço realizado" required>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-25">
+      <label for="dataderetira">Data de retira</label>
+    </div>
+    <div class="col-75">
+      <input type="date" id="dataderetira" name="dataderetira" placeholder="dd-mm-yyyy"required>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-25">
+      <label for="valor">Valor</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="valor" name="valor" placeholder=" Digite Valor "required>
     </div>
   </div>
   <br>
