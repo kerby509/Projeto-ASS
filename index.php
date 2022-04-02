@@ -40,9 +40,9 @@
                 <nav>
                     <ul>
                         <li><a href="cadcliente.php">Registra Cliente</a></li>
-                        <li><a href="cadFunc.php">Cadastrar Funcionario</a></li>
+                        <li><a href="ordemservico.php">Ordem serviço</a></li> </br>
                         <li><a href="RegEntrega.php">Registra entrega</a></li>
-                        <li><a href="Atualizar2.php">Atualizar Lista</a></li>
+                        <li><a href="Atualizar2.php">Atualizar Lista</a></li> </br>
                         <li><a href="Delete.php">Excluir Serviços</a></li>
                         <li><a href="consulta.php">Consulta Lista</a></li>
                         <li><a href="pagamento.php">Registra Pagamemto</a></li>
