@@ -1,5 +1,44 @@
 <?php
 
+include 'db.php';
+try{
+  $cpf= '';
+  $nome= '';
+  $servicos='';
+  $pagamento= '';
+
+
+
+  
+
+  if(@$_POST['cpf']){
+
+      $comando= $db->prepare("INSERT INTO pag (cpf,nome,servicos,pagamento) VALUES (:cpf,:nome,:servicos,:pagamento)");
+      
+    
+      $comando->bindParam('cpf', $_POST['cpf'], PDO::PARAM_STR);
+      $comando->bindParam('nome', $_POST['nome']);
+      $comando->bindParam('servicos', $_POST['servicos'], PDO::PARAM_STR);
+      $comando->bindParam('pagamento', $_POST['pagamento'], PDO::PARAM_STR);
+      $comando->execute();
+    }
+
+
+} catch (PDOException $e) {
+    echo 'Erro ao executar comando no banco de dados: ' . $e->getMessage();
+    exit();
+}
+ session_start();
+
+ if( @$_POST['cpf']==''&&
+   @$_POST['nome']==''&&
+   @$_POST['servicos']==''&&
+   @$_POST['pagamento']==''){
+
+
+
+   
+}
 
 
 ?>
@@ -49,20 +88,20 @@
       <label for="servico">Serviços</label>
     </div>
     <div class="col-75">
-      <input type="text" id="servico" name="servico" placeholder="Digite o serviço realizado" required>
+      <input type="text" id="servicos" name="servicos" placeholder="Digite o serviço realizado" required>
     </div>
   </div>
 
   <div class="row">
     <div class="col-25">
-      <label for="pag">Pagamento</label>
+      <label for="pagamento">F.Pagamento</label>
     </div>
     <div class="col-75">
-      <select id="pag" name="pagamento">
+      <select id="pagamento" name="pagamento">
         <option value="avista">Á Vista</option>
         <option value="Boleto">Boleto</option>
         <option value="Credito">Crédito</option>
-        <option value="Credito">Pix</option>
+        <option value="Pix">Pix</option>
 
        
       </select>
