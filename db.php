@@ -48,6 +48,7 @@ try {
            senha TEXT,
            created_at DATETIME DEFAULT CURRENT_TIMESTAMP
        )');
+       
 
         $db->exec('CREATE TABLE ordem (
             -- id INTEGER PRIMARY KEY,
@@ -55,6 +56,18 @@ try {
             dataderetira TEXT,
             modelo TEXT,
             servicos TEXT,
+            valor TEXT,
+            pagamento TEXT  ,
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+        )'); 
+
+
+         $db->exec('CREATE TABLE pag (
+            cpf Varchar(11) PRIMARY KEY,
+            nome TEXT,
+            servicos TEXT,
+            pagamento TEXT,
+
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP
         )'); 
 
