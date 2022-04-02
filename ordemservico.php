@@ -4,9 +4,11 @@ include 'db.php';
 //include "consulta.php";
 try{
   $cpf= '';
-  $dataderetira= '';
+  $nome= '';
+  $datadeentrada= '';
   $modelo= '';
   $sercicos='';
+<<<<<<< HEAD
   $valor='';
   $pagamento='';
 
@@ -14,6 +16,15 @@ try{
  ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
  error_reporting(E_ALL);
+=======
+  $dataderetira= '';
+  $valor= '';
+
+  
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+>>>>>>> 9490de80927b36517c45334c0c00a8e68c0dc8dc
 
   if(@$_POST['cpf']){
     if($_POST['pagamento']=='S'){
@@ -25,16 +36,26 @@ ini_set('display_startup_errors', 1);
 
 
       //var_dump($db);exit;
+<<<<<<< HEAD
       $comando= $db->prepare("INSERT INTO ordem(cpf,dataderetira,modelo,servicos,valor,pagamento) VALUES (:cpf,:dataderetira,:modelo,:servicos,:valor,:pagamento)");
+=======
+      $comando= $db->prepare("INSERT INTO ordem(cpf,nome,datadeentrada,modelo,servicos,dataderetira,valor) VALUES (:cpf,:nome,:datadeentrada,:modelo,:servicos,:dataderetira,:valor)");
+>>>>>>> 9490de80927b36517c45334c0c00a8e68c0dc8dc
       
     
       $comando->bindParam('cpf', $_POST['cpf'], PDO::PARAM_STR);
-      $comando->bindParam('dataderetira', $_POST['data_de_retira']);
+      $comando->bindParam('nome', $_POST['nome'], PDO::PARAM_STR);
+      $comando->bindParam('datadeentrada', $_POST['datadeentrada']);
       $comando->bindParam('modelo', $_POST['modelo'], PDO::PARAM_STR);
       $comando->bindParam('servicos', $_POST['servicos'], PDO::PARAM_STR);
+<<<<<<< HEAD
       $comando->bindParam('valor', $_POST['valor'], PDO::PARAM_STR);
       $comando->bindParam('pagamento', $pagamento, PDO::PARAM_STR);
 
+=======
+      $comando->bindParam('dataderetira', $_POST['dataderetira']);
+      $comando->bindParam('valor', $_POST['valor'], PDO::PARAM_STR);
+>>>>>>> 9490de80927b36517c45334c0c00a8e68c0dc8dc
       $comando->execute();
     }
 
@@ -46,9 +67,12 @@ ini_set('display_startup_errors', 1);
  session_start();
 
  if( @$_POST['cpf']==''&&
-   @$_POST['data de retira']==''&&
+   @$_POST['nome']==''&&
+   @$_POST['datadeentrada']==''&&
    @$_POST['modelo']==''&&
-   @$_POST['servicos']==''){
+   @$_POST['servicos']==''&&
+   @$_POST['dataderetira']==''&&
+   @$_POST['valor']==''){
 //   //@_POST['senha']){
        //$_SESSION['autenticados']=1;
        //header('Location: index.php');
@@ -87,13 +111,23 @@ ini_set('display_startup_errors', 1);
       <input type="text" id="cpf" name="cpf" placeholder=" Digite cpf "required>
     </div>
   </div>
+
+
+  <div class="row">
+    <div class="col-25">
+      <label for="nome">Nome</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="nome" name="nome" placeholder="Digite nome do cliente"required>
+    </div>
+  </div>
    
   <div class="row">
     <div class="col-25">
-      <label for="telefone">Data de retira</label>
+      <label for="datadeentrada">Data de entrada</label>
     </div>
     <div class="col-75">
-      <input type="date" id="data de retira" name="data de retira" placeholder="dd-mm-yyyy"required>
+      <input type="date" id="datadeentrada" name="datadeentrada" placeholder="dd-mm-yyyy"required>
     </div>
     
   </div>
@@ -110,7 +144,7 @@ ini_set('display_startup_errors', 1);
 
   <div class="row">
     <div class="col-25">
-      <label for="servico">Serviços</label>
+      <label for="servicos">Serviços</label>
     </div>
     <div class="col-75">
       <input type="text" id="servicos" name="servicos" placeholder="Digite o serviço realizado" required>
@@ -119,6 +153,7 @@ ini_set('display_startup_errors', 1);
 
   <div class="row">
     <div class="col-25">
+<<<<<<< HEAD
       <label for="servico">Valor</label>
     </div>
     <div class="col-75">
@@ -126,6 +161,26 @@ ini_set('display_startup_errors', 1);
     </div>
   </div>
 
+=======
+      <label for="dataderetira">Data de retira</label>
+    </div>
+    <div class="col-75">
+      <input type="date" id="dataderetira" name="dataderetira" placeholder="dd-mm-yyyy"required>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-25">
+      <label for="valor">Valor</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="valor" name="valor" placeholder=" Digite Valor "required>
+    </div>
+  </div>
+  <br>
+  <br>
+>>>>>>> 9490de80927b36517c45334c0c00a8e68c0dc8dc
   <div class="row">
     <div class="col-25">
       <label for="servico">Pagamento</label>

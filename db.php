@@ -39,8 +39,7 @@ try {
         )'); 
        
        $db->exec('CREATE TABLE funcionario(
-           id INTEGER PRIMARY KEY,
-           cpf  TEXT,
+           cpf Varchar(11) PRIMARY KEY,
            nome TEXT,
            email TEXT,
            endereco TEXT,
@@ -53,9 +52,11 @@ try {
         $db->exec('CREATE TABLE ordem (
             -- id INTEGER PRIMARY KEY,
             cpf Varchar(11) PRIMARY KEY,
-            dataderetira TEXT,
+            nome TEXT,
+            datadeentrada TEXT,
             modelo TEXT,
             servicos TEXT,
+<<<<<<< HEAD
             valor TEXT,
             pagamento TEXT  ,
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP
@@ -68,6 +69,10 @@ try {
             servicos TEXT,
             pagamento TEXT,
 
+=======
+            dataderetira TEXT,
+            valor TEXT,
+>>>>>>> 9490de80927b36517c45334c0c00a8e68c0dc8dc
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP
         )'); 
 

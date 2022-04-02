@@ -44,7 +44,6 @@ try {
 ?>
 
 <html>
-<link rel="stylesheet" href="caixa.css">
 
     <form action="update.php" method="post">
         <p>Atualizar lista de Servicos</p>
