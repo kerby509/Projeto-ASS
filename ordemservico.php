@@ -7,22 +7,34 @@ try{
   $dataderetira= '';
   $modelo= '';
   $sercicos='';
+  $valor='';
+  $pagamento='';
 
   
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
+ ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+ error_reporting(E_ALL);
 
   if(@$_POST['cpf']){
+    if($_POST['pagamento']=='S'){
+      $pagamento=1;
+    
+    }else{
+      $pagamento=0;
+    }
+
 
       //var_dump($db);exit;
-      $comando= $db->prepare("INSERT INTO ordem(cpf,dataderetira,modelo,servicos) VALUES (:cpf,:dataderetira,:modelo,:servicos)");
+      $comando= $db->prepare("INSERT INTO ordem(cpf,dataderetira,modelo,servicos,valor,pagamento) VALUES (:cpf,:dataderetira,:modelo,:servicos,:valor,:pagamento)");
       
     
       $comando->bindParam('cpf', $_POST['cpf'], PDO::PARAM_STR);
       $comando->bindParam('dataderetira', $_POST['data_de_retira']);
       $comando->bindParam('modelo', $_POST['modelo'], PDO::PARAM_STR);
       $comando->bindParam('servicos', $_POST['servicos'], PDO::PARAM_STR);
+      $comando->bindParam('valor', $_POST['valor'], PDO::PARAM_STR);
+      $comando->bindParam('pagamento', $pagamento, PDO::PARAM_STR);
+
       $comando->execute();
     }
 
@@ -50,6 +62,7 @@ try{
 <html lang="pt-br">
 <link rel="stylesheet" href="caixa.css">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,9 +71,6 @@ try{
     
 </head>
 <body>
-
-<br>
-<!-- <h1>Cadastra Cliente</h1> -->
 
 
 <div class="container">
@@ -106,11 +116,42 @@ try{
       <input type="text" id="servicos" name="servicos" placeholder="Digite o serviço realizado" required>
     </div>
   </div>
-  <br>
-  <br>
+
   <div class="row">
-    <input type="submit" value="Ordem Servicos" name="update"/>
+    <div class="col-25">
+      <label for="servico">Valor</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="valor" name="valor" placeholder="Digite o valor" required>
+    </div>
   </div>
+
+  <div class="row">
+    <div class="col-25">
+      <label for="servico">Pagamento</label>
+    </div>
+
+
+
+<label for="radio-sim"><input type="radio" name="pagamento" value="S" id="pagamento">
+   Sim</label>
+
+      
+      <input type="radio" id="pagamento" name="pagamento" value="N" placeholder="" checked >
+      <label for="sim">Não</label>
+
+    </div>
+  </div> 
+ 
+  </br>
+  </br>
+  </br>
+  </br>
+  <div class="ordem">
+    <input type="submit" value="Ordem servico" name="update"/>
+  </div>
+  
+
   </form>
 </div>
 
