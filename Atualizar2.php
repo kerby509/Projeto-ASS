@@ -81,7 +81,7 @@ try {
       <label for="telefone">Data de retira</label>
     </div>
     <div class="col-75">
-      <input type="date" id="data de retira" name="data de retira" placeholder="dd-mm-yyyy"required>
+      <input type="date" id="dataderetira" name="dataderetira" placeholder="dd-mm-yyyy"required>
     </div>
      </div>
 
