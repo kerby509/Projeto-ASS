@@ -8,7 +8,6 @@ try{
   $datadeentrada= '';
   $modelo= '';
   $sercicos='';
-<<<<<<< HEAD
   $valor='';
   $pagamento='';
 
@@ -16,7 +15,6 @@ try{
  ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
  error_reporting(E_ALL);
-=======
   $dataderetira= '';
   $valor= '';
 
@@ -24,7 +22,6 @@ ini_set('display_startup_errors', 1);
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
->>>>>>> 9490de80927b36517c45334c0c00a8e68c0dc8dc
 
   if(@$_POST['cpf']){
     if($_POST['pagamento']=='S'){
@@ -36,11 +33,10 @@ error_reporting(E_ALL);
 
 
       //var_dump($db);exit;
-<<<<<<< HEAD
+
       $comando= $db->prepare("INSERT INTO ordem(cpf,dataderetira,modelo,servicos,valor,pagamento) VALUES (:cpf,:dataderetira,:modelo,:servicos,:valor,:pagamento)");
-=======
       $comando= $db->prepare("INSERT INTO ordem(cpf,nome,datadeentrada,modelo,servicos,dataderetira,valor) VALUES (:cpf,:nome,:datadeentrada,:modelo,:servicos,:dataderetira,:valor)");
->>>>>>> 9490de80927b36517c45334c0c00a8e68c0dc8dc
+
       
     
       $comando->bindParam('cpf', $_POST['cpf'], PDO::PARAM_STR);
@@ -48,14 +44,12 @@ error_reporting(E_ALL);
       $comando->bindParam('datadeentrada', $_POST['datadeentrada']);
       $comando->bindParam('modelo', $_POST['modelo'], PDO::PARAM_STR);
       $comando->bindParam('servicos', $_POST['servicos'], PDO::PARAM_STR);
-<<<<<<< HEAD
+
       $comando->bindParam('valor', $_POST['valor'], PDO::PARAM_STR);
       $comando->bindParam('pagamento', $pagamento, PDO::PARAM_STR);
 
-=======
       $comando->bindParam('dataderetira', $_POST['dataderetira']);
       $comando->bindParam('valor', $_POST['valor'], PDO::PARAM_STR);
->>>>>>> 9490de80927b36517c45334c0c00a8e68c0dc8dc
       $comando->execute();
     }
 
@@ -122,7 +116,7 @@ error_reporting(E_ALL);
     </div>
   </div>
    
-  <div class="row">
+  <!-- <div class="row">
     <div class="col-25">
       <label for="datadeentrada">Data de entrada</label>
     </div>
@@ -130,7 +124,7 @@ error_reporting(E_ALL);
       <input type="date" id="datadeentrada" name="datadeentrada" placeholder="dd-mm-yyyy"required>
     </div>
     
-  </div>
+  </div> -->
 
   <div class="row">
     <div class="col-25">
@@ -151,17 +145,11 @@ error_reporting(E_ALL);
     </div>
   </div>
 
+  
+
   <div class="row">
     <div class="col-25">
-<<<<<<< HEAD
-      <label for="servico">Valor</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="valor" name="valor" placeholder="Digite o valor" required>
-    </div>
-  </div>
 
-=======
       <label for="dataderetira">Data de retira</label>
     </div>
     <div class="col-75">
@@ -180,20 +168,19 @@ error_reporting(E_ALL);
   </div>
   <br>
   <br>
->>>>>>> 9490de80927b36517c45334c0c00a8e68c0dc8dc
   <div class="row">
     <div class="col-25">
       <label for="servico">Pagamento</label>
     </div>
 
 
-
+<div class="col-75">
 <label for="radio-sim"><input type="radio" name="pagamento" value="S" id="pagamento">
    Sim</label>
-
       
       <input type="radio" id="pagamento" name="pagamento" value="N" placeholder="" checked >
       <label for="sim">Não</label>
+  </div>
 
     </div>
   </div> 
