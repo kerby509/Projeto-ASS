@@ -22,14 +22,13 @@ $data = $comando->fetch();
 
 session_start();
 if($data){
-<<<<<<< HEAD
+
     // if(@$_POST['usuario']==''&&
     // @$_POST['senha']=='')
-     {
-=======
+     
+
     //if(@$_POST['usuario']==''&&
     //@$_POST['senha']==''){
->>>>>>> a84ac7a26722cb85f03e18b744c59754f41cbe82
         $_SESSION['autenticados']=1;
 
 
@@ -45,7 +44,6 @@ if($data){
 //}
 
 
-//include 'barra_de_navigação.php';
 
 ?>
 </div>
@@ -69,13 +67,22 @@ if($data){
 
             <div style="text-align: center;
                 margin-top: 0.5rem;">
-                    <button type="submit">Entrar</button>     
+                    <button type="submit">Entrar</button> 
+                    
+                    
+                </div>
 
-             </div>
+                <div style="text-align: center;
+                    margin-top: 0.5rem; "> 
+                    <form>
+                        <a href="login2.php">
+                            <input type="button" value="Eu sou Administrador">
 
-             <div style="text-align: center;
-                margin-top: 0.5rem;">                    
-             </div>
+                        </a>
+                                 
+                     </form>
+                </div>
+            </form>
        
         
 
