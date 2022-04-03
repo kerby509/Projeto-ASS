@@ -20,20 +20,23 @@
              $cpf= $_POST['cpf'];
            
          $comando = $db->prepare('SELECT cpf FROM funcionario WHERE cpf = :cpf');
+         //$comando = $db->prepare('SELECT cpf FROM usuarios WHERE cpf = :cpf');
          $comando->bindParam(':cpf', $cpf);
          $comando->execute();
          $data=$comando->fetch();
          
          if(!$data){
              echo ' cpf não existe';
+
+         }else{
+           echo 'Dados apagar com sucesso';
          }
      
          $comando = $db->prepare('DELETE FROM funcionario WHERE cpf=:cpf');
+         //$comando = $db->prepare('DELETE FROM usuarios WHERE cpf=:cpf');
          $comando->bindParam(':cpf', $cpf);
      
          $comando->execute();
-         
-     
      
          }
      }catch (PDOException $e) {

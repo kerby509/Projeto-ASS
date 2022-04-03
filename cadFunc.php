@@ -67,7 +67,7 @@ try{
 
 
 <div class="container">
-  <a href="index.php"><button>Voltar</button></a>
+  <a href="index2.php"><button>Voltar</button></a>
   <h1>Cadastra Funcionário</h1>
 
  

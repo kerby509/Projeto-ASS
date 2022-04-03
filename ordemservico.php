@@ -5,20 +5,14 @@ include 'db.php';
 try{
   $cpf= '';
   $nome= '';
-  $datadeentrada= '';
+  //$datadeentrada= '';
   $modelo= '';
   $sercicos='';
+  $dataderetira= '';
   $valor='';
   $pagamento='';
 
-  
- ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
- error_reporting(E_ALL);
-  $dataderetira= '';
-  $valor= '';
 
-  
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -34,18 +28,18 @@ error_reporting(E_ALL);
 
       //var_dump($db);exit;
 
-      $comando= $db->prepare("INSERT INTO ordem(cpf,dataderetira,modelo,servicos,valor,pagamento) VALUES (:cpf,:dataderetira,:modelo,:servicos,:valor,:pagamento)");
-      $comando= $db->prepare("INSERT INTO ordem(cpf,nome,datadeentrada,modelo,servicos,dataderetira,valor) VALUES (:cpf,:nome,:datadeentrada,:modelo,:servicos,:dataderetira,:valor)");
+      $comando= $db->prepare("INSERT INTO ordem(cpf,nome,dataderetira,modelo,servicos,valor,pagamento) VALUES (:cpf,:nome,:dataderetira,:modelo,:servicos,:valor,:pagamento)");
+      //$comando= $db->prepare("INSERT INTO ordem(cpf,nome,datadeentrada,modelo,servicos,dataderetira,valor) VALUES (:cpf,:nome,:datadeentrada,:modelo,:servicos,:dataderetira,:valor)");
 
       
     
       $comando->bindParam('cpf', $_POST['cpf'], PDO::PARAM_STR);
       $comando->bindParam('nome', $_POST['nome'], PDO::PARAM_STR);
-      $comando->bindParam('datadeentrada', $_POST['datadeentrada']);
+      //$comando->bindParam('datadeentrada', $_POST['datadeentrada']);
       $comando->bindParam('modelo', $_POST['modelo'], PDO::PARAM_STR);
       $comando->bindParam('servicos', $_POST['servicos'], PDO::PARAM_STR);
 
-      $comando->bindParam('valor', $_POST['valor'], PDO::PARAM_STR);
+      //$comando->bindParam('valor', $_POST['valor'], PDO::PARAM_STR);
       $comando->bindParam('pagamento', $pagamento, PDO::PARAM_STR);
 
       $comando->bindParam('dataderetira', $_POST['dataderetira']);
@@ -62,7 +56,7 @@ error_reporting(E_ALL);
 
  if( @$_POST['cpf']==''&&
    @$_POST['nome']==''&&
-   @$_POST['datadeentrada']==''&&
+   //@$_POST['datadeentrada']==''&&
    @$_POST['modelo']==''&&
    @$_POST['servicos']==''&&
    @$_POST['dataderetira']==''&&
@@ -76,27 +70,30 @@ error_reporting(E_ALL);
 
 ?>
    
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="pt-br">
 <link rel="stylesheet" href="caixa.css">
-
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ordem Servicos</title>
+    <title>Ordem</title>
     
 </head>
 <body>
 
+<br>
+
+
 
 <div class="container">
   <a href="index.php"><button>Voltar</button></a>
-  <h1>Ordem Servicos</h1>
+  <h1>Ordem de Servicos</h1>
+  
 
  
-  <form action="ordemservico.php" method= "POST">
+  <form action="" method= "POST">
   <div class="row">
     <div class="col-25">
       <label for="cpf">CPF</label>
@@ -106,16 +103,20 @@ error_reporting(E_ALL);
     </div>
   </div>
 
-
   <div class="row">
     <div class="col-25">
       <label for="nome">Nome</label>
     </div>
     <div class="col-75">
+
+      <!-- <input type="date" id="dataderetira" name="dataderetira" placeholder="dd-mm-yyyy"required> -->
+
       <input type="text" id="nome" name="nome" placeholder="Digite nome do cliente"required>
+
     </div>
+
   </div>
-   
+
   <!-- <div class="row">
     <div class="col-25">
       <label for="datadeentrada">Data de entrada</label>
@@ -125,38 +126,44 @@ error_reporting(E_ALL);
     </div>
     
   </div> -->
-
+    
   <div class="row">
+
+     </div>
+
+     <div class="row">
+
     <div class="col-25">
       <label for="modelo">Modelo</label>
     </div>
     <div class="col-75">
       <input type="text" id="modelo" name="modelo" placeholder="Digite o modelo"required>
     </div>
+
   </div>
 
-
   <div class="row">
+
+
+    <div class="row">
+
     <div class="col-25">
-      <label for="servicos">Serviços</label>
+      <label for="servico">Serviços</label>
     </div>
     <div class="col-75">
       <input type="text" id="servicos" name="servicos" placeholder="Digite o serviço realizado" required>
     </div>
   </div>
-
+    
   
-
   <div class="row">
     <div class="col-25">
-
       <label for="dataderetira">Data de retira</label>
     </div>
     <div class="col-75">
       <input type="date" id="dataderetira" name="dataderetira" placeholder="dd-mm-yyyy"required>
     </div>
   </div>
-
 
   <div class="row">
     <div class="col-25">
@@ -166,8 +173,7 @@ error_reporting(E_ALL);
       <input type="text" id="valor" name="valor" placeholder=" Digite Valor "required>
     </div>
   </div>
-  <br>
-  <br>
+
   <div class="row">
     <div class="col-25">
       <label for="servico">Pagamento</label>
@@ -184,16 +190,11 @@ error_reporting(E_ALL);
 
     </div>
   </div> 
- 
-  </br>
-  </br>
-  </br>
-  </br>
-  <div class="ordem">
-    <input type="submit" value="Ordem servico" name="update"/>
-  </div>
-  
+  <br>
+  <div class="row">
 
+    <input type="submit" value="Ordem de Servicos" name="update"/>
+  </div>
   </form>
 </div>
 

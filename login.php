@@ -25,18 +25,15 @@ if($data){
 
     // if(@$_POST['usuario']==''&&
     // @$_POST['senha']=='')
-<<<<<<< HEAD
      //{
 
     //if(@$_POST['usuario']==''&&
     //@$_POST['senha']==''){
 
-=======
      
 
     //if(@$_POST['usuario']==''&&
     //@$_POST['senha']==''){
->>>>>>> f9e52bcc3c34c5fbf095a700775e75205843066f
         $_SESSION['autenticados']=1;
 
 

@@ -1,9 +1,61 @@
 <?php
+  
 
+  include 'db.php';
 
-
-
-?>
+  // ini_set('display_errors', 1);
+  // ini_set('display_startup_errors', 1);
+  // error_reporting(E_ALL);
+  
+  try {
+  
+      $cpf = '' ;
+      // $nome= '';
+      // // $datadeentrada = '';
+      // $modelo = '';
+      // $servicos = '';
+      // $dataderetira= '';
+      // $valor='';
+      // $pagamento ='';
+      
+      if(@$_POST['cpf']){
+        $cpf= $_POST['cpf'];
+        // $nome = $_POST['nome'];
+        // //$datadeentrada = $_POST['datadeentrada'];
+        // $modelo = $_POST['modelo'];       
+        // $servicos = $_POST['servicos'];
+        // $dataderetira = $_POST['dataderetira'];
+        // $valor = $_POST['valor'];
+        // $modelo = $_POST['pagamento']; 
+    $comando = $db->prepare('SELECT cpf FROM ordem WHERE cpf = :cpf');
+    $comando->bindParam(':cpf', $cpf);
+    $comando->execute();
+    $data=$comando->fetch();
+    if(!$data){
+        echo ' cpf não existe';
+    }
+  
+      // $comando = $db->prepare('UPDATE ordem SET nome = :nome, modelo = :modelo,servicos = :servicos, dataderetira = :dataderetira, valor = :valor, pagamento= :pagamento WHERE cpf = :cpf');
+      // $comando->bindParam(':cpf', $cpf);
+      // $comando->bindParam(':nome', $nome);
+      // // $comando->bindParam(':datadeentrada', $datadeentrada);
+      // $comando->bindParam(':modelo', $modelo);
+      // $comando->bindParam(':servicos', $servicos);
+      // $comando->bindParam(':dataderetira', $dataderetira);
+      // $comando->bindParam(':valor', $valor);
+      // $comando->bindParam(':pagamento', $pagamento);
+  
+  
+      $comando->execute();
+  
+  
+      }
+  }catch (PDOException $e) {
+      echo 'Erro ao executar comando no banco de dados: ' . $e->getMessage();
+      exit();
+  }
+  
+  ?>
 
 
 <!DOCTYPE html>
@@ -37,14 +89,14 @@
       <input type="text" id="cpf" name="cpf" placeholder=" Digite cpf cliente "required>
     </div>
   </div>
-  <div class="row">
+  <!-- <div class="row">
     <div class="col-25">
       <label for="nome">Nome</label>
     </div>
     <div class="col-75">
       <input type="text" id="nome" name="nome" placeholder="Digite nome do cliente"required>
     </div>
-  </div>
+  </div> -->
   <div class="atualiza">
     <a href="Atualizar2.php">Realizar Atualização</a>
   </div>

@@ -1,72 +1,73 @@
 <?php
-//include'css/styles.css';
-include'db.php';
- $comando=$db->prepare("SELECT s.*, u.nome FROM usuarios u join  ordem s on u.cpf=s.cpf where :cpf = s.cpf ");
-//  $comando->bindParam(':cpf', $cpf, );
-$comando->bindParam('cpf', $_POST['cpf'], PDO::PARAM_STR);
- 
- $comando->execute();
- //$data = $comando->fetch();
+include 'db.php';
 
- while($data = $comando->fetch()){
-    //  echo'<p>'. $linha['nome']. ','. $linha['cpf'] . ','. $linha['telefone'] .','. $linha['datadeentrega'] .','. $linha['modelo'] .','. $linha['servicos'] .'</p>';
-     
-     echo'<p>'. $data['nome'].'</p>';
-     echo'<p>'. $data['dataderetira'].'</p>';
-     echo'<p>'. $data['modelo'].'</p>';
-     echo'<p>'. $data['servicos'].'</p>';
-     
- }
-session_start();
-    if($data){
-        if(@$_POST['cpf']==''){
-            // $_SESSION['autenticados']=1;
-            // header('Location: index.php');
-            exit();
-        }
-    }
-// //include 'barra_de_navigação.php';
- ?>
+$comando = $db->prepare('SELECT * FROM ordem ');
+$comando->execute();
 
+?>
 <!DOCTYPE html>
-<html lang="pt-br">
-<!-- <link rel="stylesheet" href="caixa.css"> -->
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Consulta Lista</title>
-    
-</head>
-<!-- background-image: url(assets/fundo.jpeg) -->
-<body style="background-color:#7fffd4 ";
-">
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
-    <div class="container">
-    <a href="index.php"><button>Voltar</button></a>
-</br>
-    <h1>Consulta Lista</h1>
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body style= "background:#7fffd4";>
+
+
+<h2>Lista dos Servicos  </h2>
+<!-- <a href="index2.php"><button>Voltar</button></a> -->
+
+<!-- <form action="lista.php" method= "POST"> -->
+
+<table style="width:100%">
+  <tr>
+    <td>Cpf</td>
+    <td>Nome</td>
+    <td>Modelo</td>
+    <td>Servicos</td>
+    <td>Data de retira</td>
+    <td>Valor</td>
+    <td>Pagamemto</td>
    
-    <form style="background-color:;" action="consultaservicos.php" method="post">
-        <input type="text" name="cpf">
-        <input type="submit" value="consultaservicos"><br>
-    </form>
+  </tr>
+  <?php 
+      if($linha = $comando->fetchAll()){
+        for ($i=0;$i<count($linha);$i++){
+    ?>
+      <tr>
+            <td><?=$linha[$i]['nome']?></td>
+            <td><?=$linha[$i]['cpf']?></td>
+            <td><?=$linha[$i]['modelo']?></td>
+            <td><?=$linha[$i]['servicos']?></td>
+            <td><?=$linha[$i]['dataderetira']?></td>
+            <td><?=$linha[$i]['valor']?></td>
+            <td><?=$linha[$i]['pagamento']?></td>
+            
+            
+            
+      </tr>
+  <?php }
+      }
+    ?>
+</table>
+
+<!-- <p>To undestand the example better, we have added borders to the table.</p> -->
 
 </body>
-<html>
+</html>
 
-<!-- <html>
-    <form action="consultaservicos.php" method="post">
-        <p>Consulta lista de Servicos</p>
-        <input type="text" name="cpf" id='cpf'>
-        <input type="submit" value="consultaservicos" id='sub'><br>
-    </form>
-    <!-- <script>
-        let input = document.getElementById('cpf')
-        let sub = document.getElementById('sub')
-        sub.addEventListener('click', () => {
-            input.value = ""
-        })
-    </script> -->
-<html> -->

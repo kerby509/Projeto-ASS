@@ -26,10 +26,12 @@ tr:nth-child(even) {
 }
 </style>
 </head>
-<body>
+<body style= "background:#7fffd4";>
 
 
-<h2>Table dos clientes </h2>
+<h2>Lista dos clientes </h2>
+<!-- <a href="index2.php"><button>Voltar</button></a> -->
+
 <!-- <form action="lista.php" method= "POST"> -->
 
 <table style="width:100%">
@@ -49,7 +51,17 @@ tr:nth-child(even) {
             <td><?=$linha[$i]['cpf']?></td>
             <td><?=$linha[$i]['email']?></td>
             <td><?=$linha[$i]['telefone']?></td>
-            <td><a href="Delete">Apagar</a></td>
+            
+            <td>
+                <form action="deletecl.php" method= "POST">
+                
+                <input type="hidden" name = "cpf" value="<?=$linha[$i]['cpf']?>">
+                <input type="submit" value="Delete">
+                </form>
+
+            
+
+        </td>
             
       </tr>
   <?php }

@@ -41,12 +41,12 @@
                     <ul>
                         <li><a href="cadcliente.php">Registra Cliente</a></li>
                         <li><a href="ordemservico.php">Ordem serviço</a></li> </br>
-                        <li><a href="RegEntrega.php">Registra entrega</a></li>
+                        <li><a href="listacliente.php">Lista Cliente</a></li>
                         <li><a href="Atualizar2.php">Atualizar Lista</a></li> </br>
-                        <li><a href="Delete.php">Excluir Serviços</a></li>
-                        <li><a href="consulta.php">Consulta Lista</a></li>
-                        <li><a href="pagamento.php">Registra Pagamemto</a></li>
-                        <li><a href="contato.html">Lista de Peças</a></li>
+                       
+                        <li><a href="consultaservicos.php">Consulta Lista</a></li>
+                        
+                        
                         
                     </ul>
                 </nav>

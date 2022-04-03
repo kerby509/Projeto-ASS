@@ -26,10 +26,12 @@ tr:nth-child(even) {
 }
 </style>
 </head>
-<body>
+<body style= "background:#7fffd4";>
 
 
-<h2>Table dos clientes </h2>
+<h2>Lista dos Funcionario </h2>
+<a href="index2.php"><button>Voltar</button></a>
+
 <!-- <form action="listafunc.php" method= "POST"> -->
 
 <table style="width:100%">
