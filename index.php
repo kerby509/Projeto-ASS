@@ -40,8 +40,8 @@
                 <nav>
                     <ul>
                         <li><a href="cadcliente.php">Registra Cliente</a></li>
-                        <li><a href="ordemservico.php">Ordem serviço</a></li> </br>
-                        <li><a href="listacliente.php">Lista Cliente</a></li>
+                        <li><a href="ordemservico.php">Ordem serviço</a></li>
+                        <li><a href="listacliente.php">Lista Cliente</a></li> 
                         <li><a href="Atualizar2.php">Atualizar Lista</a></li> </br>
                        
                         <li><a href="consultaservicos.php">Consulta Lista</a></li>
