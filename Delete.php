@@ -23,6 +23,7 @@
          $comando->bindParam(':cpf', $cpf);
          $comando->execute();
          $data=$comando->fetch();
+         
          if(!$data){
              echo ' cpf não existe';
          }
@@ -31,6 +32,7 @@
          $comando->bindParam(':cpf', $cpf);
      
          $comando->execute();
+         
      
      
          }
@@ -43,7 +45,7 @@
      
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="pt-br">
 <link rel="stylesheet" href="caixa.css">
 
@@ -82,9 +84,9 @@
       <input type="text" id="nome" name="nome" placeholder="Digite nome do cliente"required>
     </div>
   </div> -->
-  <div class="row">
+  <!-- <div class="row">
     <input type="submit" value="Delete Cliente" name="update"/>
   </div>
 </form>
 </body>
-</html>
+</html> --> 

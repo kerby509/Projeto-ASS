@@ -2,9 +2,9 @@
      
 include 'db.php';
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 
 try {
 
@@ -93,7 +93,7 @@ try {
     <div class="col-75">
       <input type="text" id="nome" name="nome" placeholder="Digite nome do cliente"required>
     </div>
-<<<<<<< HEAD
+
   </div>
 
   <div class="row">
@@ -107,25 +107,25 @@ try {
   </div>
     
   <div class="row">
-=======
+
      </div>
 
      <div class="row">
->>>>>>> 9171d6b1c6ed279c1fffd4f022538c9b2f382b12
+
     <div class="col-25">
       <label for="modelo">Modelo</label>
     </div>
     <div class="col-75">
       <input type="text" id="modelo" name="modelo" placeholder="Digite o modelo"required>
     </div>
-<<<<<<< HEAD
+
   </div>
 
   <div class="row">
-=======
+
 
     <div class="row">
->>>>>>> 9171d6b1c6ed279c1fffd4f022538c9b2f382b12
+
     <div class="col-25">
       <label for="servico">Serviços</label>
     </div>
@@ -135,7 +135,6 @@ try {
   </div>
     
   
-<<<<<<< HEAD
   <div class="row">
     <div class="col-25">
       <label for="dataderetira">Data de retira</label>
@@ -154,9 +153,6 @@ try {
     </div>
   </div>
 
- 
-=======
->>>>>>> 9171d6b1c6ed279c1fffd4f022538c9b2f382b12
   <br>
   <div class="row">
     <input type="submit" value="Atualizar" name="update"/>

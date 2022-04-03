@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     
-<div style="width:150px; margin:auto; heigh:500px;margin-top:300px:background-color: blue;
-">
+<!-- <div style="width:150px; margin:auto; heigh:500px;margin-top:300px:background-color: blue;
+"> -->
 <?php
 session_start();
  
@@ -22,14 +22,14 @@ $data = $comando->fetch();
 
 session_start();
 if($data){
-<<<<<<< HEAD
+
     // if(@$_POST['usuario']==''&&
     // @$_POST['senha']=='')
-     {
-=======
+     //{
+
     //if(@$_POST['usuario']==''&&
     //@$_POST['senha']==''){
->>>>>>> a84ac7a26722cb85f03e18b744c59754f41cbe82
+
         $_SESSION['autenticados']=1;
 
 
@@ -41,14 +41,15 @@ if($data){
         // header('Location: index.php');
         //exit();
    // 
-    }
-//}
+     //}
+}
 
 
 //include 'barra_de_navigação.php';
 
 ?>
-</div>
+
+    <div>
 
 
     <link rel="stylesheet" href="styles.css">
@@ -81,6 +82,4 @@ if($data){
 
         </form>
     </div>
-
-
-</html>
+ </html>

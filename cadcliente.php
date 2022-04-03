@@ -17,7 +17,7 @@ try{
 // ini_set('display_startup_errors', 1);
 // error_reporting(E_ALL);
 
-  if(@$_POST['nome']){
+  if(@$_POST['cpf']){
 
       //var_dump($db);exit;
       $comando= $db->prepare("INSERT INTO usuarios(nome,cpf,email,telefone) VALUES (:nome,:cpf,:email,:telefone)");
