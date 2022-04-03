@@ -112,34 +112,7 @@ try{
     
   </div>
 
-  <!-- <div class="row">
-    <div class="col-25">
-      <label for="telefone">Data Entrega</label>
-    </div>
-    <div class="col-75">
-      <input type="date" id="data de entrega" name="data de entrega" placeholder="dd-mm-yyyy"required>
-    </div>
-    
-  </div>
-
-  <div class="row">
-    <div class="col-25">
-      <label for="modelo">Modelo</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="modelo" name="modelo" placeholder="Digite o modelo"required>
-    </div>
-  </div>
-
-
-  <div class="row">
-    <div class="col-25">
-      <label for="servico">Serviços</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="servicos" name="servicos" placeholder="Digite o serviço realizado" required>
-    </div>
-  </div> -->
+ 
   <br>
   <br>
   <div class="row">

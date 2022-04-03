@@ -91,7 +91,11 @@ try {
       <label for="nome">Nome</label>
     </div>
     <div class="col-75">
+<<<<<<< HEAD
+      <input type="date" id="dataderetira" name="dataderetira" placeholder="dd-mm-yyyy"required>
+=======
       <input type="text" id="nome" name="nome" placeholder="Digite nome do cliente"required>
+>>>>>>> 9490de80927b36517c45334c0c00a8e68c0dc8dc
     </div>
 
   </div>

@@ -64,22 +64,7 @@ echo"Aqui é parte de registra entrega"
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-25">
-      <label for="pag">Pagamento</label>
-    </div>
-    <div class="col-75">
-      <select id="pag" name="pagamento">
-        <option value="avista">Á Vista</option>
-        <option value="Boleto">Boleto</option>
-        <option value="Credito">Crédito</option>
-       
-      </select>
-    </div>
-    
-  </div>
-   
-
+ 
   <div class="row">
     <div class="col-25">
       <label for="lname">Telefone</label>

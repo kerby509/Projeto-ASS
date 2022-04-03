@@ -25,11 +25,18 @@ if($data){
 
     // if(@$_POST['usuario']==''&&
     // @$_POST['senha']=='')
+<<<<<<< HEAD
      //{
 
     //if(@$_POST['usuario']==''&&
     //@$_POST['senha']==''){
 
+=======
+     
+
+    //if(@$_POST['usuario']==''&&
+    //@$_POST['senha']==''){
+>>>>>>> f9e52bcc3c34c5fbf095a700775e75205843066f
         $_SESSION['autenticados']=1;
 
 
@@ -45,7 +52,6 @@ if($data){
 }
 
 
-//include 'barra_de_navigação.php';
 
 ?>
 
@@ -70,13 +76,22 @@ if($data){
 
             <div style="text-align: center;
                 margin-top: 0.5rem;">
-                    <button type="submit">Entrar</button>     
+                    <button type="submit">Entrar</button> 
+                    
+                    
+                </div>
 
-             </div>
+                <div style="text-align: center;
+                    margin-top: 0.5rem; "> 
+                    <form>
+                        <a href="login2.php">
+                            <input type="button" value="Eu sou Administrador">
 
-             <div style="text-align: center;
-                margin-top: 0.5rem;">                    
-             </div>
+                        </a>
+                                 
+                     </form>
+                </div>
+            </form>
        
         
 
