@@ -20,10 +20,10 @@ try {
     if(@$_POST['cpf']){
 
       if($_POST['pagamento']=='S'){
-        $pagamento=1;
+        $pagamento="Sim";
       
       }else{
-        $pagamento=0;
+        $pagamento="Não";
       }
   
       $cpf= $_POST['cpf'];

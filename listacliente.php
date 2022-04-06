@@ -28,7 +28,6 @@ tr:nth-child(even) {
 </head>
 <body style= "background:#7fffd4";>
 
-
 <h2>Lista dos clientes </h2>
 <!-- <a href="index2.php"><button>Voltar</button></a> -->
 
